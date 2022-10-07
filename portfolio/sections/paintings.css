@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: 'Oswald', sans-serif;
+  background: #f9f9f9;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1091px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 3rem;
+}
+
+.main-header {
+  height: 53vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.main-header video {
+  width: -webkit-fill-available;
+}
+
+.main-header h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.main-header h1 span {
+  color: #b50d10;
+}
+
+.main-header p {
+  font-size: 2rem;
+}
+
+img {
+  width: 360px;
+}
+
+video {
+  width: 360px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  position: relative;
+  width: 20rem;
+  height: 25rem;
+  background-size: cover;
+  background-color: black;
+  border-radius: 20px;
+  background-position: center center;
+  overflow: hidden;
+}
+
+
+.card h3 {
+  margin-bottom: 2rem;
+}
+
+.card img {
+  height: 400px;
+}
+
+.card>div {
+  padding: 2rem;
+}
+
+.card:nth-child(even) img {
+  order: 2;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+@media(max-width:600px) {
+  .card {
+    display: block;
+  }
+}
+
+.card__inner {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  opacity: 0;
+  padding: 2rem 1.3rem 2rem 2rem;
+  transition: all 0.4s ease 0s;
+}
+
+/*  On hovering card opacity
+    of content must be 1*/
+.card:hover .card__inner {
+  opacity: 1;
+}
+
+/*  General property for heading
+    and paragraph*/
+.card__inner h2 {
+  margin-top: 1rem;
+}
+
+.card__inner p {
+  overflow-y: hidden;
+  height: 87%;
+  padding-right: 1rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.card__inner a {
+  overflow-y: hidden;
+  height: 87%;
+  color: white;
+  padding-right: 1rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+
+.card__inner img {
+  width: 100%;
+}
+
+#myVideo {
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#about {
+  padding: 1rem;
+  margin: 1rem;
+  position: absolute;
+  font: small-caps bold 21px/1 sans-serif;
+}

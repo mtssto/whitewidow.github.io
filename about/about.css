@@ -1,0 +1,36 @@
+
+/* text css above hero image*/
+.hero_title {
+    font-size: 3.5rem;
+}
+.hero_par {
+    font-size: 1.18rem;
+    text-align: -webkit-left;
+    color:black;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#about{
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  #myVideo {
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
