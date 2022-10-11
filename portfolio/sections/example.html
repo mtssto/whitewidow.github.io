@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+  rel="stylesheet"
+/>    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    
+    <!-- <div class="lightbox">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
+              data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+              alt="Table Full of Spices"
+              class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
+            />
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Square/1.webp"
+              data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp"
+              alt="Coconut with Strawberries"
+              class="w-100 shadow-1-strong rounded"
+            />
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Vertical/1.webp"
+              data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp"
+              alt="Dark Roast Iced Coffee"
+              class="w-100 shadow-1-strong rounded"
+            />
+          </div>
+        </div>
+      </div> -->
+
+      <div class="row">
+        <div class="col">
+         <img src="../micuerpoelectrico/_MG_1200.jpeg" data-aos="fade-right" onclick="openLightbox();toSlide(1)" class="hover-shadow preview">
+        </div>
+        <div class="col">
+         <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview">
+        </div>
+        <div class="col">
+         <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview">
+        </div>
+       </div>
+       
+       <div id="Lightbox" class="modal">
+       
+        <span class="close pointer" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content">
+         <div class="slide">
+          <img src="../micuerpoelectrico/_MG_1200.jpeg" class="image-slide" alt="Toy car on the road." />
+         </div>
+         <div class="slide">
+          <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="image-slide" alt="Toy car exploring offroad." />
+         </div>
+         <div class="slide">
+          <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="image-slide" alt="Toy car in the city." />
+         </div>
+       
+         <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+         <a class="next" onclick="changeSlide(1)">&#10095;</a>
+       
+        
+        </div>
+       </div>
+
+
+
+      <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+    ></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="example.js"></script>
+        <script>
+            AOS.init();
+        </script> 
+</body>
+</html>

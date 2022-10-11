@@ -1,12 +1,27 @@
-function myFunction(imgs) {
-    // Get the expanded image
-    var expandImg = document.getElementById("expandedImg");
-    // Get the image text
-    var imgText = document.getElementById("imgtext");
-    // Use the same src in the expanded image as the image being clicked on from the grid
-    expandImg.src = imgs.src;
-    // Use the value of the alt attribute of the clickable image as text inside the expanded image
-    imgText.innerHTML = imgs.alt;
-    // Show the container element (hidden with CSS)
-    expandImg.parentElement.style.display = "block";
-  }
+var videoSource = ['../dda4.mp4', '../dda3.mp4',  '../dda6.mp4' ] 
+
+let key = 0; // global
+const videoCount = videoSource.length;
+const element = document.getElementById("myVideo");
+ 
+
+function playVideo(videoNum) {
+    element.setAttribute("src", videoSource[videoNum]);
+    console.log(element);
+    element.setAttribute("type",'video/mp4');
+    element.autoplay = true;
+    element.load();
+    element.play();
+}
+
+document.getElementById('myVideo').addEventListener('ended', myFunctionHandle, false);
+ 
+function myFunctionHandle() {
+    key++;
+    if (key == videoCount) {
+        key = 0;
+        playVideo(key);
+    } else {
+        playVideo(key);
+    }
+}
