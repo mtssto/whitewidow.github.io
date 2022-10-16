@@ -1,4 +1,4 @@
-var videoSource = ['video1.mp4','video2.mp4', 'video_3.mp4'] 
+var videoSource = ['video1.mp4','video2.mp4', 'video_3.mp4', 'video4.mp4'] 
 
 let key = 0; // global
 const videoCount = videoSource.length;
