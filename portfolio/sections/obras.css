@@ -1,0 +1,18 @@
+
+.container {
+    width: 90%;
+}
+
+.info{
+  margin-top: 7rem;
+}
+
+.info span{
+  text-align: center;
+  margin-left: 10.4rem;
+}
+
+.info h1{
+  font-size: 2rem;
+  text-align: center;
+}
