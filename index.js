@@ -1,4 +1,4 @@
-var videoSource = ['../dda4.mp4', '../dda3.mp4',  '../dda6.mp4' ] 
+var videoSource = ['dda4.mp4', 'dda3.mp4',  'dda6.mp4' ] 
 
 let key = 0; // global
 const videoCount = videoSource.length;
