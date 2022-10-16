@@ -9,6 +9,9 @@
      letter-spacing: 7px;
 }
 
+body {
+     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
 .nav {
      width: 102%;
      margin: 3rem;
@@ -64,7 +67,7 @@
 .column {
      flex: 25%;
      max-width: 25%;
-     padding: 54px 1px;
+     padding: 0px 4px;
    }
    
    .column img {
@@ -102,5 +105,3 @@
    .col img{
      width: 100%;
    }
-
-  
