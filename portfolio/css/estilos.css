@@ -64,7 +64,7 @@
 .column {
      flex: 25%;
      max-width: 25%;
-     padding: 0 4px;
+     padding: 54px 1px;
    }
    
    .column img {
@@ -102,3 +102,5 @@
    .col img{
      width: 100%;
    }
+
+  
