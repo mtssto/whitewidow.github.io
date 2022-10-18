@@ -184,9 +184,10 @@ header video {
 
 
 #press {
-  padding-left: 5rem;
-  margin: 2rem;
+  padding: 1rem;
+  margin: 1rem;
   position: absolute;
+  left: 7rem;
   font: small-caps bold 21px/1 sans-serif;
 }
 
