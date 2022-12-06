@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">VIDEOS</div>
+        <div class="video-container">
+            <div class="video">
+                <video src="./videos/ddavideo1.mp4" autoplay loop muted></video>
+            </div>
+            <div class="video">
+                <video src="./videos/dda3.mp4" autoplay loop muted></video>
+            </div>
+            <div class="video">
+                <video src="./videos/dda4.mp4"autoplay loop muted></video>
+            </div>
+            <div class="video">
+                <video src="./videos/dda5.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var video = document.querySelectorAll('video');
+        video.forEach(play => play.addEventListener('click', () =>{
+            play.classList.toggle('active');
+            play.play();
+       
+        }));
+       
+    </script>
+</body>
+</html>
