@@ -62,3 +62,18 @@ html{
     transition: none;
     transform:  translate(-50%, -50%) scale(1);
 }
+
+.nav {
+    width: 102%;
+    margin: 3rem;
+    background-color: transparent;
+    height: 0px;
+}
+
+#about {
+    padding: 0rem;
+    margin: -2rem;
+    position: absolute;
+    color: black;
+    font: small-caps bold 32px/1 sans-serif;
+  }
