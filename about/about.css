@@ -1,39 +1,25 @@
-
-/* text css above hero image*/
-.hero_title {
-    font-size: 3.5rem;
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 54px;
+  padding-left: 3rem;
 }
+
+@media (min-width: 768px) {
+  .container-fluid {
+    justify-content: flex-start; /* Content starts at the left on larger screens */
+    padding-left: 20rem !important;
+  } 
+}
+
+
+p {
+  margin-bottom: 1.5rem; /* Adjust the spacing */
+  line-height: 1.6; /* Optional: for readability */
+}
+
 .hero_par {
-    font-size: 1.18rem;
-    text-align: -webkit-left;
-    color:black;
+  margin-bottom: 1.5rem; /* Adjust this value for more or less space */
+  line-height: 1.6; /* Optional: improves readability */
 }
-
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-#about {
-    padding: 0rem;
-    margin: 1rem;
-    position: absolute;
-    color: black;
-    font: small-caps bold 32px/1 sans-serif;
-  }
-  
-  #myVideo {
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }

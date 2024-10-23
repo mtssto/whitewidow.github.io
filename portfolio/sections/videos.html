@@ -5,17 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../Ilustrations/Ilustrations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="../../index copy.css">
 </head>
 <body>
-    <div class="container">
-        <div>
-            <nav class="nav">
-                <a href="../../index.html" id="about">
-                    <-- BACK</a>
-            </nav>
+
+    <button id="burger-menu" class="burger-menu">
+        &#9776;
+      </button>
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="../../index.html">DIEGO DE ADURIZ</a></li>
+                <li><a href="../../about/about.html">About</a></li>
+                <li><a href="../../press/press.html">Press</a></li>
+                <li>
+                    <a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
+                    <ul class="custom-dropdown-content">
+                        <li><a href="microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
+                        <li><a href="elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
+                        <li><a href="laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
+                        <li><a href="miCuerpoElectrico.html">MI CUERPO ELÉCTRICO</a></li>
+                        <li><a href="friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
+                        <li><a href="muralSeptimo.html">MURAL SÉP7IMO</a></li>
+                        <li><a href="todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
+                        <li><a href="lasNaves.html">LAS NAVES</a></li>
+                    </ul>
+                  </li>
+               <li>
+                  <a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
+                    <ul class="custom-dropdown-content">
+                        <li><a href="obras.html">PASTELES</a></li>
+                        <li><a href="obras.html">DIGITALES</a></li>
+                    </ul>
+               </li>  
+                <li><a href="../../under-construction.html">Proyectos</a></li>
+                <li><a href="../../under-construction.html">Textos</a></li>
+                <li><a href="../../under-construction.html">Shop</a></li>
+                <li><a href="../../under-construction.html">Contacto</a></li>
+            </ul>
         </div>
-        <div class="video-container">
+    
+        <!-- <div class="video-container">
             <div class="video">
                 <video src="./videos/ddavideo1.mp4" autoplay loop muted></video>
             </div>
@@ -88,17 +121,93 @@
             <div class="video">
                 <video src="./videos/dda29.mp4" autoplay loop muted></video>
             </div>
-        </div>
-    </div>
+        </div> -->
 
-    <script>
-        var video = document.querySelectorAll('video');
-        video.forEach(play => play.addEventListener('click', () =>{
-            play.classList.toggle('active');
-            play.play();
-       
-        }));
-       
-    </script>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <video src="./videos/ddavideo1.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda3.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda4.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda5.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda6.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda7.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda8.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda9.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda10.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda11.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda12.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda13.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda14.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda15.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda16.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda17.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda20.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda22.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda24.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda25.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda26.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda27.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda28.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="./videos/dda29.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div id="custom-vid-modal" class="custom-vid-modal">
+            <span class="close">&times;</span>
+            <video class="custom-vid-modal-content" id="modal-video" controls loop muted></video>
+            <div class="modal-caption"></div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
+          </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="video.js"></script>
+
 </body>
 </html>

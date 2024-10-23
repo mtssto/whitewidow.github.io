@@ -1,0 +1,42 @@
+.bodyMicuerpo{
+    position: fixed;
+}
+
+/* General container */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; /* Align text-section at the top */
+    gap: 20px;
+}
+
+/* Text section styles */
+.text-section {
+    flex: 1 1 25%; /* Text takes up 25% width on desktop */
+    max-width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Gallery section */
+.galeria {
+    flex: 1 1 70%; /* Gallery takes up 70% width on desktop */
+    max-width: 70%;
+}
+
+/* Mobile and smaller screen adjustments */
+@media screen and (max-width: 992px) {
+    .text-section {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+        order: -1; /* Move text-section above the gallery */
+        padding: 0 15px;
+        text-align: center; /* Center the text for mobile */
+    }
+
+    .galeria {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+}

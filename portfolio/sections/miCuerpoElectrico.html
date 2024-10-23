@@ -8,37 +8,81 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="./miCuerpoElectrico.scss">
+    <link rel="stylesheet" href="./miCuerpoElectrico.css">
+    <link rel="stylesheet" href="../../index copy.css">
 </head>
+
 <body class="bodyMicuerpo">
-    <div>
-        <nav class="nav">
-            <a href="../../index.html" id="about">
-                <-- BACK</a>
+    
+    <!-- <div>
+        <nav class="custom-nav">
+            <ul>
+                <li><a href="../../about/about.html" id="about">ABOUT</a></li>
+                <li><a href="../../press/press.html" id="press">PRESS</a></li>
+                <li><a href="../../muestras/muestras.html" id="press">MUESTRAS</a></li>
+                <li><a href="../../portfolio/sections/obras.html" id="press">OBRAS</a></li>
+                <li><a href="../../under-construction.html" id="press">PROYECTOS</a></li>
+                <li><a href="../../under-construction.html" id="press">TEXTOS</a></li>
+                <li><a href="../../under-construction.html" id="press">SHOP</a></li>
+                <li><a href="../../under-construction.html" id="press">CONTACTO</a></li>
+            </ul>
         </nav>
+    </div> -->
+    <button id="burger-menu" class="burger-menu">
+        &#9776;
+      </button>
+    <div class="sidebar">
+        <ul>
+          <li><a href="../../index.html">DIEGO DE ADURIZ</a></li>
+          <li><a href="../../about/about.html">About</a></li>
+          <li><a href="../../press/press.html">Press</a></li>
+          <li>
+            <a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
+            <ul class="custom-dropdown-content">
+                <li><a href="microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
+                <li><a href="elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
+                <li><a href="laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
+                <li><a href="friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
+                <li><a href="muralSeptimo.html">MURAL SÉP7IMO</a></li>
+                <li><a href="todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
+                <li><a href="lasNaves.html">LAS NAVES</a></li>
+            </ul>
+          </li> 
+          <li>
+            <a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
+              <ul class="custom-dropdown-content">
+                  <li><a href="obras.html">PASTELES</a></li>
+                  <li><a href="digitalArt.html">DIGITAL</a></li>
+              </ul>
+         </li> 
+          <li><a href="../../under-construction.html">Proyectos</a></li>
+          <li><a href="../../under-construction.html">Textos</a></li>
+          <li><a href="../../under-construction.html">Shop</a></li>
+          <li><a href="../../under-construction.html">Contacto</a></li>
+        </ul>
     </div>
+
     <main class="container">
-        <div class="row">
-            <div class="col s12 center-align">
+        <div>
+            <div>
                 <h1 class="titulo">MI CUERPO ELÉCTRICO</h1>
-                <span>Diego de Aduriz</span>
+                <h3 class="sub-title">Aldo De Sousa</h3>
             </div>
+            
         </div>
-
         <div class="row galeria">
-            <div class="column" data-aos="fade-left">
+            <div class="column column-4" data-aos="fade-left">
                 <div class="material-placeholder">
-                    <img src="../sections//micuerpoelectrico/MG_1181.jpeg" alt="" class="responsive-img materialboxed">
+                    <img src="../sections/micuerpoelectrico/MG_1181.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
                 <div class="material-placeholder">
-                    <img src="../sections//micuerpoelectrico/MG_1185.jpeg" alt="" class="responsive-img materialboxed">
+                    <img src="../sections/micuerpoelectrico/MG_1185.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
             </div>
-
-            <div class="column" data-aos="fade-left">
+        
+            <div class="column column-4" data-aos="fade-left">
                 <div class="material-placeholder">
-                    <img src="../sections//micuerpoelectrico/MG_1187.jpeg" alt="" class="responsive-img materialboxed">
+                    <img src="../sections/micuerpoelectrico/MG_1187.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
                 <div class="material-placeholder">
                     <img src="../sections/micuerpoelectrico/MG_1192.jpeg" alt="" class="responsive-img materialboxed">
@@ -47,7 +91,7 @@
                     <img src="../sections/micuerpoelectrico/MG_1200.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
             </div>
-            <div class="column" data-aos="fade-left">
+            <div class="column column-4" data-aos="fade-left">
                 <div class="material-placeholder">
                     <img src="../sections/micuerpoelectrico/MG_1201.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
@@ -55,7 +99,7 @@
                     <img src="../sections/micuerpoelectrico/MG_1202.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
             </div>
-            <div class="column" data-aos="fade-right">
+            <div class="column column-4" data-aos="fade-right">
                 <div class="material-placeholder">
                     <img src="../sections/micuerpoelectrico/MG_1203.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
@@ -67,11 +111,15 @@
                 </div>
             </div>
         </div>
+        <button class="materialboxed-close" aria-label="Close Modal">×</button>
     </main>
-
+    <footer>
+        <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
+      </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="dropdown.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();

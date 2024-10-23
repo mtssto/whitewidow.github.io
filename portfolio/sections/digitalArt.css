@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -123,17 +123,17 @@ video {
   opacity: 0;
   padding: 2rem 1.3rem 2rem 2rem;
   transition: all 0.4s ease 0s;
-}
+} */
 
 /*  On hovering card opacity
     of content must be 1*/
-.card:hover .card__inner {
+/* .card:hover .card__inner {
   opacity: 1;
-}
+} */
 
 /*  General property for heading
     and paragraph*/
-.card__inner h2 {
+/* .card__inner h2 {
   margin-top: 1rem;
 }
 
@@ -173,4 +173,39 @@ video {
   margin: 1rem;
   position: absolute;
   font: small-caps bold 21px/1 sans-serif;
+} */
+
+/* Hide the dropdown content by default */
+.custom-dropdown-content {
+  display: none;
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
 }
+
+/* When the parent li has the open class, show the dropdown */
+.sidebar ul li.open .custom-dropdown-content {
+  display: block;  /* Show the dropdown content */
+  padding-top: 1rem;
+}
+
+
+.custom-dropdown-content li a {
+  font-size: 14px;
+  color: #000;
+  padding: 5px 0;
+  display: block;
+}
+
+/* Add arrow (caret) after dropdown links */
+.dropdown-toggle::after {
+  content: ' \25BC'; /* Unicode for down arrow (caret) */
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Rotate arrow when open */
+.sidebar ul li.open .dropdown-toggle::after {
+  content: ' \25B2'; /* Unicode for up arrow (caret) */
+}
+

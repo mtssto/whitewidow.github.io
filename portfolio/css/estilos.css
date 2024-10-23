@@ -10,22 +10,10 @@
 }
 
 body {
-     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-}
-.nav {
-     width: 102%;
-     margin: 3rem;
-     background-color: transparent;
-     height: 0px;
+     background-image: linear-gradient(135deg, #fdfcfb 0%, #ffffff 100%);
 }
 
-#about {
-     padding: 0rem;
-     margin: -2rem;
-     position: absolute;
-     color: black;
-     font: small-caps bold 32px/1 sans-serif;
-   }
+
 
 .galeria img {
      box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);

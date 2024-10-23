@@ -9,20 +9,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="./miCuerpoElectrico.scss">
+    <link rel="stylesheet" href="../../index copy.css">
+    <link rel="stylesheet" href="./miCuerpoElectrico.css">
 </head>
 <body class="bodyMicuerpo">
-    <div>
-        <nav class="nav">
-            <a href="../../index.html" id="about">
-                <-- BACK</a>
-        </nav>
-    </div>
+    <button id="burger-menu" class="burger-menu">
+        &#9776;
+      </button>
+    <div class="sidebar">
+        <ul>
+          <li><a href="../../index.html">DIEGO DE ADURIZ</a></li>
+          <li><a href="../../about/about.html">About</a></li>
+          <li><a href="../../press/press.html">Press</a></li>
+          <li>
+            <a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
+            <ul class="custom-dropdown-content">
+                <li><a href="microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
+                <li><a href="elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
+                <li><a href="laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
+                <li><a href="miCuerpoElectrico.html">MI CUERPO ELÉCTRICO</a></li>
+                <li><a href="friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
+                <li><a href="todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
+                <li><a href="lasNaves.html">LAS NAVES</a></li>
+            </ul>
+          </li> 
+          <li>
+            <a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
+              <ul class="custom-dropdown-content">
+                  <li><a href="obras.html">PASTELES</a></li>
+                  <li><a href="digitalArt.html">DIGITAL</a></li>
+              </ul>
+         </li> 
+          <li><a href="../../under-construction.html">Proyectos</a></li>
+          <li><a href="../../under-construction.html">Textos</a></li>
+          <li><a href="../../under-construction.html">Shop</a></li>
+          <li><a href="../../under-construction.html">Contacto</a></li>
+        </ul>
+      </div>
     <main class="container">
         <div class="row">
             <div class="col s12 center-align">
                 <h1 class="titulo">MURAL SÉP7IMO</h1>
-                <span>Diego de Aduriz</span>
             </div>
         </div>
 
@@ -115,11 +142,16 @@
                 </div>
             </div>
         </div>
+        <button class="materialboxed-close" aria-label="Close Modal">×</button>
     </main>
-
+    
+    <footer>
+        <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
+      </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="dropdown.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();

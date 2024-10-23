@@ -16,164 +16,175 @@
 </head>
 
 <body>
-  <div>
-    <nav class="nav">
+
+  <!-- <header class="main-header">
+    <h1><a href="./index.html"><span>Diego de Aduriz</span></a></h1>
+  </header> -->
+
+  <!-- Sidebar Navigation -->
+  <button id="burger-menu" class="burger-menu">
+    &#9776;
+  </button>
+  <div class="sidebar">
+    <ul>
       <ul>
-        <b><a href="./about/about.html" id="about">ABOUT</a></b>
-      
+        <li  class="li-title"><a href="./index.html">DIEGO DE ADURIZ</a></li>
+        <li><a href="./about/about.html" id="about-link">About</a></li>
+        <li><a href="./press/press.html" id="press-link" >Press</a></li>
+        <li><a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
+          <ul class="dropdown-content">
+            <li><a href="./portfolio/sections/microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
+            <li><a href="./portfolio/sections/elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
+            <li><a href="./portfolio/sections/laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
+            <li><a href="./portfolio/sections/miCuerpoElectrico.html">MI CUERPO ELÉCTRICO</a></li>
+            <li><a href="./portfolio/sections/friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
+            <li><a href="./portfolio/sections/muralSeptimo.html">MURAL SÉP7IMO</a></li>
+            <li><a href="./portfolio/sections/todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
+            <li><a href="./portfolio/sections/lasNaves.html">LAS NAVES</a></li>
+          </ul></li>
+        <li><a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
+          <ul class="dropdown-content">
+            <li><a href="./portfolio/sections/obras.html">PASTELES</a></li>
+            <li><a href="./portfolio/sections/obras.html">DIGITAL</a></li>
+          </ul></li>
+          <li><a href="./portfolio/sections/videos.html" id="proyectos-link">Videos</a></li>
+        <li><a href="./under-construction.html" id="proyectos-link">Proyectos</a></li>
+        <li><a href="./under-construction.html" id="textos-link">Textos</a></li>
+        <li><a href="./under-construction.html" id="shop-link">Shop</a></li>
+        <li><a href="./under-construction.html" id="contacto-link">Contacto</a></li>
       </ul>
-      <ul>  <b><a href="./press/press.html" id="press">/ PRESS</a></b></ul>
-    </nav>
-</div>
-<header class="main-header">
-  <h1><span>Diego de Aduriz</span> </h1>
-</header>
-<video autoplay muted id="myVideo" src="video1.mp4">
-</video>
-  <main id="down" class="container">
+  </div>
+  <div id="overlay" class="overlay"></div>
+
+
+  <main class="container clearfix">
     <div class="cards">
-      <div>
-        <div class="card" data-aos="fade-right">
-           <a href="./portfolio/sections/laLlaveyElTestigo.html"
-            style="flex: 1;">
-            <img
-              src="https://museomacba.org/wp-content/uploads/2022/08/MACBA_Diego-de-Aduriz_Flyer-cuadrado-1080x1080px_01B-min.jpg"
-              alt="" />
-          </a>
-        </div>
+      <!-- Card 1 -->
+      <div class="card" data-aos="fade-right">
+        <a href="./portfolio/sections/microcentroCuenta.html" >
+          <img src="./portfolio/sections/Microcentro cuenta/1.jpg" alt="MICROCENTRO CUENTA">
+        </a>
         <div class="feature-card-footer">
-          <b><span>La llave y el testigo - MACBA (2022)</span></b>
+          <b><span>MICROCENTRO CUENTA</span></b>
         </div>
       </div>
 
-      <!-- <div class="card" data-aos="fade-left"> <video autoplay muted loop>
-          <source src="ddavideo1.mp4" type="video/mp4">
-        </video></div> -->
-
-      <div data-aos="fade-right">
-        <div class="card"><a href="./portfolio/sections/miCuerpoElectrico.html" style="flex: 1;">
-            <img src="./portfolio//sections/micuerpoelectrico/FACHADA+ADURIZ+2.jpeg" alt="" /></a>
-        </div>
+      <!-- Card 2 -->
+      <div class="card" data-aos="fade-right">
+        <a href="./portfolio/sections/elefantesEnElBazar.html" style="flex: 1;">
+          <img src="./portfolio/sections/Legislatura/10.jpg" alt="ELEFANTES EN EL BAZAR">
+        </a>
         <div class="feature-card-footer">
-          <b><span>Mi cuerpo eléctrico - Aldo de Sousa (2021)</span></b>
+          <b><span>ELEFANTES EN EL BAZAR</span></b>
         </div>
       </div>
-    
-      <!-- <div data-aos="fade-right">
-        <div class="card"><a href="./portfolio/sections/tutorialModerno.html" style="flex: 1;">
-            <img src="./portfolio/micuerpoelectrico/FACHADA+ADURIZ+2.jpeg" alt="" /></a>
-        </div>
+
+      <!-- Card 3 -->
+      <div class="card large" data-aos="fade-right">
+        <a href="./portfolio/sections/laLlaveyElTestigo.html" style="flex: 1;">
+          <img src="https://museomacba.org/wp-content/uploads/2022/08/MACBA_Diego-de-Aduriz_Flyer-cuadrado-1080x1080px_01B-min.jpg" alt="LA LLAVE Y EL TESTIGO">
+        </a>
         <div class="feature-card-footer">
-          <b><span>Tutorial - Museo de Arte Moderno Buenos Aires (2020)</span></b>
+          <b><span>LA LLAVE Y EL TESTIGO</span></b>
         </div>
-      </div>   -->
-      <div data-aos="fade-left">
-        <div class="card"><a href="./portfolio/sections/obras.html"">
-        <img src=" https://66.media.tumblr.com/124c889624a4192f3b014f415741a6f7/tumblr_o71504P2nA1r74tb2o1_1280.jpg"
-            alt="" />
-          </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card" data-aos="fade-right">
+        <a href="./portfolio/sections/miCuerpoElectrico.html" style="flex: 1;">
+          <img src="./portfolio/sections/micuerpoelectrico/FACHADA+ADURIZ+2.jpeg" alt="MI CUERPO ELÉCTRICO">
+        </a>
+        <div class="feature-card-footer">
+          <b><span>MI CUERPO ELÉCTRICO</span></b>
         </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card" data-aos="fade-right" style="flex: 1;">
+        <a href="./portfolio/sections/obras.html">
+          <img src="https://66.media.tumblr.com/124c889624a4192f3b014f415741a6f7/tumblr_o71504P2nA1r74tb2o1_1280.jpg" alt="OBRAS">
+        </a>
         <div class="feature-card-footer">
           <b><span>OBRAS</span></b>
         </div>
       </div>
 
-      <!-- <div class="card" data-aos="fade-right"> <video autoplay muted loop>
-          <source src="dda3.mp4" type="video/mp4">
-        </video>
-      </div> -->
-
-      <div>
-        <div class="card" data-aos="fade-right">
-          <a href="./portfolio/sections/digitalArt.html" style="flex: 1;">
-            <img src="https://64.media.tumblr.com/8b3509d1a53475d5ff7ce6d8e1728c08/tumblr_n27g36FCcd1r74tb2o1_640.jpg"
-              alt="">
-          </a>
-        </div>
+      <!-- Card 6 -->
+      <div class="card large" data-aos="fade-right">
+        <a href="./portfolio/sections/digitalArt.html" style="flex: 1;">
+          <img src="https://64.media.tumblr.com/8b3509d1a53475d5ff7ce6d8e1728c08/tumblr_n27g36FCcd1r74tb2o1_640.jpg" alt="ARTE DIGITAL">
+        </a>
         <div class="feature-card-footer">
           <b><span>ARTE DIGITAL</span></b>
         </div>
       </div>
 
-      <!-- <div class="card"  data-aos="fade-up"> <video autoplay muted loop>
-          <source src="dda5.mp4" type="video/mp4">
-        </video>
-      </div>  -->
-      <!-- <div class="card"  data-aos="fade-left">
-        <a href="./portfolio/sections/style.html" style="flex: 1;">
-          <img src="https://64.media.tumblr.com/6782c8c58f950eb45e9cb6620a3ef8bf/tumblr_ogupxn3mNK1r74tb2o1_500.jpg"
-            alt="">
+      <!-- Card 7 -->
+      <div class="card" data-aos="fade-up">
+        <a href="./portfolio/sections/friezeArt.html" style="flex: 1;">
+          <img src="./portfolio/sections/Frieze Art Fair -London 2008/1.jpg" alt="FRIEZE ART FAIR-LONDON">
         </a>
-      </div>  -->
-      <div>
-        <div class="card" data-aos="fade-up">
-          <a href="./portfolio/sections/friezeArt.html" style="flex: 1;">
-            <img src="./portfolio/sections/Frieze/1.jpg"
-              alt="">
-          </a>
-        </div>
         <div class="feature-card-footer">
-          <b><span>Frieze Art London</span></b>
+          <b><span>FRIEZE ART FAIR-LONDON</span></b>
         </div>
       </div>
-      <div>
-        <div class="card" data-aos="fade-right">
-          <a href="./portfolio/sections/muralSeptimo.html" style="flex: 1;">
-            <img src="./portfolio/sections/MURAL SEP7IMO/27.jpg"
-              alt="">
-          </a>
-        </div>
+
+      <!-- Card 8 -->
+      <div class="card" data-aos="fade-right">
+        <a href="./portfolio/sections/muralSeptimo.html" style="flex: 1;">
+          <img src="./portfolio/sections/MURAL SEP7IMO/27.jpg" alt="MURAL SÉP7IMO">
+        </a>
         <div class="feature-card-footer">
           <b><span>MURAL SÉP7IMO</span></b>
         </div>
       </div>
-      <!-- <div class="card"  data-aos="fade-up"> <video autoplay muted loop>
-        <source src="dda4.mp4" type="video/mp4">
-      </video>
-    </div>  -->
-      <div>
-        <div class="card" data-aos="fade-up">
-          <a href="./portfolio/sections/todoLoQueBrillaEsOro.html" style="flex: 1;">
-            <img src="./portfolio/sections/TODO LO QUE BRILLA ES ORO/2.jpg"
-              alt="">
-          </a>
-        </div>
+
+      <!-- Card 9 -->
+      <div class="card" data-aos="fade-up">
+        <a href="./portfolio/sections/todoLoQueBrillaEsOro.html" style="flex: 1;">
+          <img src="./portfolio/sections/TODO LO QUE BRILLA ES ORO/2.jpg" alt="TODO LO QUE BRILLA ES ORO">
+        </a>
         <div class="feature-card-footer">
           <b><span>TODO LO QUE BRILLA ES ORO</span></b>
         </div>
       </div>
 
-      <div>
-        <div class="card" data-aos="fade-up">
-          <a href="./portfolio/sections/lasNaves.html" style="flex: 1;">
-            <img src="./portfolio/sections/Las Naves/1.jpg"
-              alt="">
-          </a>
-        </div>
+      <!-- Card 10 -->
+      <div class="card" data-aos="fade-up">
+        <a href="./portfolio/sections/lasNaves.html" style="flex: 1;">
+          <img src="./portfolio/sections/Las Naves/1.jpg" alt="LAS NAVES">
+        </a>
         <div class="feature-card-footer">
           <b><span>LAS NAVES</span></b>
         </div>
       </div>
-      
-      <div>
-        <div class="card" data-aos="fade-up">
-          <a href="./portfolio/sections/videos.html" style="flex: 1;">
-            <img src="./video.PNG"
-              alt="">
-          </a>
-        </div>
-        <div class="feature-card-footer">
+
+      <!-- Card 11 -->
+      <div class="card" data-aos="fade-up">
+        <a href="./portfolio/sections/videos.html" style="flex: 1;">
+          <img src="./video.PNG" alt="VIDEOS">
+        </a>
+        <div href="./portfolio/sections/videos.html" class="feature-card-footer">
           <b><span>VIDEOS</span></b>
         </div>
       </div>
     </div>
-</div>
-</main>
-<script src="index.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  </main>
+  <footer>
+    <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
+  </footer>
+  <!-- Initialize AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('open');
+}
+  </script>
+
+  <script src="index.js"></script>
+
 </body>
 
 </html>

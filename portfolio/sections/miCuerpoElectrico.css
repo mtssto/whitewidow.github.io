@@ -1,0 +1,254 @@
+
+/* General container */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; /* Align text-section at the top */
+    gap: 20px;
+}
+
+/* Text section styles */
+.text-section {
+    flex: 1 1 25%; /* Text takes up 25% width on desktop */
+    max-width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Gallery section */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between images */
+    flex: 1 1 70%; /* Gallery takes up 70% width on desktop */
+    max-width: 70%;
+}
+
+/* Column styles for images */
+.column {
+    flex: 1 1 calc(33.33% - 10px); /* Three images per row by default */
+    box-sizing: border-box;
+}
+
+/* Mobile and smaller screen adjustments */
+@media screen and (max-width: 992px) {
+    .titulo {
+        font-size: 3rem; /* Slightly smaller for tablets */
+        margin-top: 3rem; /* Reduce top margin */
+        margin-bottom: 1.5rem; /* Adjust bottom margin */
+    }
+    .text-section {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+        order: -1; /* Move text-section above the gallery */
+        padding: 0 15px;
+        text-align: center; /* Center the text for mobile */
+    }
+
+    .galeria {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+
+    .column {
+        flex: 1 1 calc(50% - 10px); /* Display two images per row on mobile */
+        max-width: calc(50% - 10px);
+    }
+
+    .custom-nav ul {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items */
+        gap: 0.5rem; /* Reduce gap for smaller screens */
+    }
+
+    .custom-nav a {
+        font-size: 0.875rem; /* Reduce font size for smaller screens */
+    }
+}
+
+/* Extra small screen adjustments */
+@media screen and (max-width: 600px) {
+    .titulo {
+        font-size: 1.5rem !important; /* Smaller font for mobile */
+        margin-top: 2rem !important; /* Adjust margins */
+        margin-bottom: 1rem !important;
+    }
+    .sub-title{
+        font-size: 1.3rem !important;
+        line-height: 1%;
+        padding-left: 0rem;
+        margin: 2.946667rem 0 1.168rem 0;
+    }
+    .column {
+        flex: 1 1 calc(50% - 5px); /* Two images per row with reduced gap */
+        max-width: calc(50% - 5px);
+    }
+
+    .sidebar ul li ul.custom-dropdown-content li {
+        padding-left: 30px; /* Indent dropdown items further */
+        padding-top: 5px; /* Add a bit more space */
+      }
+}
+
+/* Encabezado principal */
+.custom-main-header {
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.custom-main-header h1 a {
+    text-decoration: none; /* Elimina el subrayado de enlaces en el título */
+}
+
+.custom-main-header h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.custom-main-header h1 span {
+    text-decoration: none;
+    color: black;
+}
+
+/* Navegación */
+.custom-nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    list-style-type: none;
+    justify-content: center; /* Center navigation items */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 0.5rem 0;
+    border: none; /* Remove any borders */
+    box-shadow: none; /* Remove any box shadows */
+}
+
+.custom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.1rem; /* Reduce the gap between items */
+    max-width: 90%; /* Limita el ancho máximo para pantallas más grandes */
+}
+
+.custom-nav ul li {
+    flex: 1 1 auto; /* Permite que cada elemento ocupe el espacio necesario */
+    text-align: center;
+    margin-bottom: 0.5rem; /* Optional: Reduce space between rows */
+}
+
+.custom-nav a {
+    color: #007bff; /* Color azul para los enlaces */
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    padding: 0.1rem 0.4rem; /* Reduce padding to bring links closer together */
+    font-size: 1rem;
+}
+
+.row .col {
+    padding: 20px .75rem; /* Adjust padding */
+}
+
+.titulo {
+    margin-top: 6rem; /* Space above the title */
+    text-align: center;
+    margin-bottom: 2rem ; /* Space below the title */
+    font-size: 4remt; /* Default large size */
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.container {
+    max-width: 95%; /* Aumenta el ancho máximo del contenedor */
+    width: 100%; /* Asegura que ocupe todo el ancho posible */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 1rem; /* Añade algo de padding para evitar que el contenido toque los bordes */
+}
+
+
+/* Hide the dropdown content by default */
+.custom-dropdown-content {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  /* When the parent li has the open class, show the dropdown */
+  .sidebar ul li.open .custom-dropdown-content {
+    display: block;  /* Show the dropdown content */
+    padding-top: 2rem !important;
+
+  }
+  
+  /* Style the links in the dropdown */
+  .sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .custom-dropdown-content li a {
+    font-size: 14px;
+    color: #000;
+    padding: 5px 0;
+    display: block;
+  }
+  
+  /* Add arrow (caret) after dropdown links */
+.dropdown-toggle::after {
+    content: ' \25BC'; /* Unicode for down arrow (caret) */
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  
+  /* Rotate arrow when open */
+  .sidebar ul li.open .dropdown-toggle::after {
+    content: ' \25B2'; /* Unicode for up arrow (caret) */
+  }
+  
+  button:focus{
+    background-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar.active ul li {
+        padding-left: 2px !important;
+    }
+}
+
+.materialboxed.active .materialboxed-close {
+    display: block; /* Show the close button only when the modal is active */
+}
+
+.sidebar ul {
+    padding-left: 1rem !important;
+}
+
+
+.sub-title{
+    font-size: 2.92rem;
+    line-height: 110%;
+    padding-left: 0rem;
+    margin: 2.946667rem 0 1.168rem 0;
+}
+

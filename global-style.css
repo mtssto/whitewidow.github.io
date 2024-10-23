@@ -1,0 +1,48 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 19px; /* Ajustado el padding */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 5px 0; /* Reducido el margen */
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    line-height: 1.5; /* Ajustado el espaciado entre líneas */
+  }
+  
+
+  /* Ensure footer stays at the bottom */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+  }
+  
+
+  @media (max-width: 600px) {
+    .sidebar {
+      position: fixed;
+      width: 180px; /* Slightly reduce the sidebar width on very small screens */
+      height: 100vh;
+    }
+}

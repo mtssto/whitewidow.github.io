@@ -1,18 +1,37 @@
-
-.container {
-    width: 90%;
+/* Image container styling */
+.info {
+  margin-bottom: 20px; /* Adds space below each image */
 }
 
-.info{
-  margin-top: 7rem;
+/* Optional: Add spacing between the columns */
+.row {
+  margin-bottom: 30px; /* Adds space between rows */
+  padding: 12px .75rem;
 }
 
-.info span{
-  text-align: center;
-  margin-left: 10.4rem;
+/* Optional: Adjust image styling */
+.info img {
+  width: 100%; /* Make sure images are responsive */
+  height: auto;
+  border-radius: 8px; /* Adds rounded corners to images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
 }
 
-.info h1{
-  font-size: 2rem;
-  text-align: center;
+/* Adjustments for small screens */
+@media (max-width: 600px) {
+  .col {
+      flex: 1 1 100%; /* Stacks the columns vertically on small screens */
+  }
+
+  .info img {
+      margin-bottom: 20px; /* Adds space below each image on small screens */
+  }
 }
+/* Ensure image displays correctly inside the lightbox */
+
+
+/* Adjust the background for better visibility */
+.materialbox-overlay {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background for lightbox */
+}
+

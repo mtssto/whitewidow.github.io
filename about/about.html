@@ -2,52 +2,105 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="about.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-</head>
+  <link href="../index copy.css"rel="stylesheet" />
+  <link href="about.css"rel="stylesheet" />
+</head> 
 
 <body>
-  
-  <video autoplay muted loop id="myVideo">
-    <source src="../catwalk_walk.mp4" type="video/mp4">
-  </video>
-  <nav>
-    <span><a href="../index.html" id="about"> <-- BACK</a></span>
-  </nav>
+
+  <button id="burger-menu" class="burger-menu">
+    &#9776;
+  </button>
+  <div class="sidebar">
+    <ul>
+      <ul>
+        <li  class="li-title"><a href="../index.html">DIEGO DE ADURIZ</a></li>
+        <li><a href="../press/press.html" id="press-link" >Press</a></li>
+        <li><a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
+          <ul class="dropdown-content">
+            <li><a href="../portfolio/sections/microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
+            <li><a href="../portfolio/sections/elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
+            <li><a href="../portfolio/sections/laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
+            <li><a href="../portfolio/sections/miCuerpoElectrico.html">MI CUERPO ELÉCTRICO</a></li>
+            <li><a href="../portfolio/sections/friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
+            <li><a href="../portfolio/sections/muralSeptimo.html">MURAL SÉP7IMO</a></li>
+            <li><a href="../portfolio/sections/todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
+            <li><a href="../portfolio/sections/lasNaves.html">LAS NAVES</a></li>
+          </ul></li>
+        <li><a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
+          <ul class="dropdown-content">
+            <li><a href="../portfolio/sections/obras.html">PASTELES</a></li>
+            <li><a href="../portfolio/sections/digitalArt.html">DIGITAL</a></li>
+          </ul></li>
+          <li><a href="../portfolio/sections/videos.html" id="proyectos-link">Videos</a></li>
+        <li><a href="../under-construction.html" id="proyectos-link">Proyectos</a></li>
+        <li><a href="../under-construction.html" id="textos-link">Textos</a></li>
+        <li><a href="../under-construction.html" id="shop-link">Shop</a></li>
+        <li><a href="../under-construction.html" id="contacto-link">Contacto</a></li>
+      </ul>
+  </div>
+  <div id="overlay" class="overlay"></div>
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-        <div class="hero_title" id="namedda" style="color: red">Diego de Aduriz</div>
+    <section class="hero-text">
+      <h2>Diego de Aduriz</h2>
+      <p class="hero_par">Diego de Aduriz estudió Bellas Artes en la Escuela Nacional de Bellas Artes Prilidiano Pueyrredón y
+        Arquitectura en la Universidad Nacional de Rosario. Participó en la Beca Kuitca (2003), CIA (2009) y en el
+        Laboratorio de Acción, en el Centro Cultural San Martin (2019).</p>
 
-        <p class="hero_par">Estudió Bellas Artes en la Escuela Nacional de Bellas Artes Prilidiano Pueyrredón y
-          Arquitectura en la Universidad Nacional de Rosario. Participó en la Beca Kuitca (2003), CIA (2009) y en el
-          Laboratorio de Acción, en el Centro Cultural San Martin (2019).</p>
+      <p class="hero_par">Trabaja de manera aleatoria en dibujo, pintura, mural, collage, diseño de moda, máscaras, performances,
+        lectura de poesía, autoedicion de libritos y fanzines y publicaciones online. Realizó muestras y desfiles en
+        galerías y museos de la Argentina y el exterior: MALBA, arteBA, Buenos Aires Fashion Week, Frieze Art Fair en
+        Londres, Consulado Argentino en New York, Hogar Collection Gallery en Brooklyn, Centro Cultural Renato Russo en
+        Brasilia, Semana Internacional de la Moda de Madrid, Belleza y Felicidad, Appetite, Miau Miau, Mite,
+        Gabelich Contemporáneo en Rosario, CCBorges, CCRecoleta, Museo de Arte Contemporáneo de Mendoza, Museo de Arte
+        Contemporáneo de Salta, entre otros.</p>
 
-          <p class="hero_par">Trabaja de manera aleatoria en dibujo, pintura, mural, collage, diseño de moda, máscaras, performances,
-          lectura de poesía, autoedicion de libritos y fanzines y publicaciones online. Realizó muestras y desfiles en
-          galerías y museos de la Argentina y el exterior: MALBA, arteBA, Buenos Aires Fashion Week, Frieze Art Fair en
-          Londres, Consulado Argentino en New York, Hogar Collection Gallery en Brooklyn, Centro Cultural Renato Russo
-          en Brasilia, Semana Internacional de la Moda de Madrid, Belleza y Felicidad, Appetite, Miau Miau, Mite,
-          Gabelich Contemporáneo en Rosario, CCBorges, CCRecoleta, Museo de Arte Contemporáneo de Mendoza, Museo de Arte
-          Contemporáneo de Salta, entre otros.</p> 
-          
-          <p class="hero_par">Participó en los siguientes premios y salones: Premio Nacional de Pintura Banco Nación (2010), Premio Andreani
-          (2015, 2017), Salón Nacional de Rosario (2019), XXIV PREMIO KLEMM (2020), Premio de Pintura del Banco Central
-          (2020). En el año 2021 fue seleccionado para el Salón Nacional de Artes Visuales. En 2020 realizó un “Tutorial
-          de Máscaras “, video-performance para el Museo de Arte Moderno, una charla y performance para el Palais de
-          Glace (“Yo seré tu espejo”) y “La fortuna del Diablo”, performance online con el auspicio del Instituto
-          Nacional del Teatro. Desde Diciembre de 2020 es representado por la galería Aldo de Sousa, donde en marzo del
-          2021 presentó la muestra “MI CUERPO ELÉCTRICO”. Publicó el libro <b>HOY RECORDÉ ALGO QUE HABÍA OLVIDADO</b> (Ivan
-          Rosado , 2017), <b>UN BESO EN LA CASA DE LOS SUEÑOS</b> (Triana, 2021), y las plaquetas <b>TRES SEXOS</b> (Belleza y
-          Felicidad, 2014) y <b>METRÓNOMO</b> (Spyral Jetti, 2015).</p>
-      </div>
-    </div>
+      <p class="hero_par">Participó en los siguientes premios y salones: Premio Nacional de Pintura Banco Nación (2010), Premio Andreani
+        (2015, 2017), Salón Nacional de Rosario (2019), XXIV PREMIO KLEMM (2020), Premio de Pintura del Banco Central
+        (2020). En el año 2021 fue seleccionado para el Salón Nacional de Artes Visuales. En 2020 realizó un “Tutorial
+        de Máscaras “, video-performance para el Museo de Arte Moderno, una charla y performance para el Palais de
+        Glace (“Yo seré tu espejo”) y “La fortuna del Diablo”, performance online con el auspicio del Instituto
+        Nacional del Teatro. Desde Diciembre de 2020 es representado por la galería Aldo de Sousa, donde en marzo del
+        2021 presentó la muestra “MI CUERPO ELÉCTRICO”. Publicó el libro <b>HOY RECORDÉ ALGO QUE HABÍA OLVIDADO</b> (Ivan
+        Rosado , 2017), <b>UN BESO EN LA CASA DE LOS SUEÑOS</b> (Triana, 2021), y las plaquetas <b>TRES SEXOS</b> (Belleza y
+        Felicidad, 2014) y <b>METRÓNOMO</b> (Spyral Jetti, 2015).</p>
+    </section>
   </div>
-  <script src="about.js"></script>
+  <footer>
+    <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
+  </footer>
+  <script src="../index.js"></script>
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const burgerMenu = document.getElementById("burger-menu");
+      const sidebar = document.querySelector(".sidebar");
+      
+      console.log("DOM fully loaded and parsed"); // Check if DOM is loaded
+  
+      if (burgerMenu && sidebar) {
+        console.log("Burger menu and sidebar found");
+        
+        burgerMenu.addEventListener("click", function() {
+          console.log("Burger menu clicked"); // Check if click is detected
+          sidebar.classList.toggle("active");
+        });
+      } else {
+        console.error("Burger menu or sidebar not found");
+      }
+    });
+  </script> -->
+  
 </body>
+
+</html>

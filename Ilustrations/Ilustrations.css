@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 159px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Grid Layout */
+.gallery-grid {
+    grid-auto-rows: 300px ;
+    gap: 8px;
+      
+    margin-left: 292px; /* Reduce margin for smaller screens */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Add Hover Effects */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Custom sizes for images */
+.gallery-item--large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item--wide {
+    grid-column: span 2;
+}
+
+.gallery-item--tall {
+    grid-row: span 2;
+}
+
+/* Modal (Full Screen Image View) */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.custom-modal-content {
+    display: block;
+    margin: auto;
+    max-width: 91%;
+    padding-top: 8rem;
+    max-height: auto;
+}
+
+.modal-caption {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.modal:hover .prev, 
+.modal:hover .next {
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .gallery-grid {
+        margin-left: 200px;       
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust column size */
+        gap: 5px; /* Reduce gap between images */
+        grid-auto-rows: 199px !important;
+        gap: 0px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        padding-top: 5rem;
+        grid-auto-rows: 199px !important;
+        margin-left: 54px;
+        padding-right: 4rem;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for mobile */
+        gap: 3px; /* Minimal gap for smaller screens */
+    }
+}
+
+
+
