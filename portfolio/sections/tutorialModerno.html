@@ -5,48 +5,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diego de Aduriz | Mi Cuerpo Eléctrico Tutorial</title>
     <link rel="stylesheet" href="tutorialModerno.css">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../navbar.css">
 </head>
-<body>
-    <div>
-        <nav>
-            <a href="../../index.html" id="about">
-                <-- BACK</a>
+
+<body class="has-navbar">
+
+    <header class="navbar">
+        <a class="navbar__brand" href="../../index.html">Diego de Aduriz</a>
+
+        <nav class="navbar__links" aria-label="Main navigation">
+            <a href="../../about/about.html">About</a>
+            <a href="../../press/press.html">Press</a>
+            <!-- Muestras Dropdown -->
+            <div class="navbar__item">
+                <a href="../../muestras/muestras.html">Muestras</a>
+                <div class="dropdown-content">
+                    <a href="microcentroCuenta.html">Microcentro Cuenta</a>
+                    <a href="elefantesEnElBazar.html">Elefantes en el Bazar</a>
+                    <a href="laLlaveyElTestigo.html">La Llave y el Testigo</a>
+                    <a href="miCuerpoElectrico.html">Mi Cuerpo Eléctrico</a>
+                    <a href="friezeArt.html">Frieze Art Fair</a>
+                    <a href="muralSeptimo.html">Mural Séptimo</a>
+                    <a href="todoLoQueBrillaEsOro.html">Todo lo que brilla es oro</a>
+                    <a href="lasNaves.html">Las Naves</a>
+                </div>
+            </div>
+
+            <!-- Obras Dropdown -->
+            <div class="navbar__item">
+                <a href="obras.html">Obras</a>
+                <div class="dropdown-content">
+                    <a href="obras.html#pasteles">Pasteles</a>
+                    <a href="digitalArt.html">Digital</a>
+                    <a href="../../Ilustrations/Ilustrations.html">Ilustraciones</a>
+                    <a href="videos.html">Videos</a>
+                </div>
+            </div>
+
+            <a href="../../proyectos/proyectos.html">Proyectos</a>
+            <a href="../../under-construction.html">Textos</a>
+            <a href="../../shop/shop.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
         </nav>
-    </div>
-    <header class="main-header">
-        <img src="../headerDDA.png" id="headerIMG" alt="">
-        <h1><span>MICUERPO</span>ELECTRICO</h1>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Open menu" aria-controls="navDrawer"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
-   
 
-    <div class="row">
-        <iframe width="1042" height="586" src="https://www.youtube.com/watch?v=yfS1bNBM_3Y&feature=emb_title" title="Diego De Aduriz - Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <div class="navbar-overlay" id="navOverlay" hidden></div>
+
+    <aside class="navbar-drawer" id="navDrawer" aria-label="Mobile menu">
+        <div class="navbar-drawer__head">
+            <a class="navbar__brand" href="../../index.html">Diego de Aduriz</a>
+            <button class="navbar-drawer__close" id="navClose" type="button" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav class="navbar-drawer__links">
+            <a href="../../about/about.html">About</a>
+            <a href="../../press/press.html">Press</a>
+
+            <!-- Muestras Dropdown in Mobile -->
+            <div class="navbar__item">
+                <a href="../../muestras/muestras.html">Muestras</a>
+                <div class="dropdown-content">
+                    <a href="microcentroCuenta.html">Microcentro Cuenta</a>
+                    <a href="elefantesEnElBazar.html">Elefantes en el Bazar</a>
+                    <a href="laLlaveyElTestigo.html">La Llave y el Testigo</a>
+                    <a href="miCuerpoElectrico.html">Mi Cuerpo Eléctrico</a>
+                    <a href="friezeArt.html">Frieze Art Fair</a>
+                    <a href="muralSeptimo.html">Mural Séptimo</a>
+                    <a href="todoLoQueBrillaEsOro.html">Todo lo que brilla es oro</a>
+                    <a href="lasNaves.html">Las Naves</a>
+                </div>
+            </div>
+
+            <!-- Obras Dropdown in Mobile -->
+            <div class="navbar__item">
+                <a href="obras.html">Obras</a>
+                <div class="dropdown-content">
+                    <a href="obras.html#pasteles">Pasteles</a>
+                    <a href="digitalArt.html">Digital</a>
+                    <a href="../../Ilustrations/Ilustrations.html">Ilustraciones</a>
+                    <a href="videos.html">Videos</a>
+                </div>
+            </div>
+
+            <a href="../../proyectos/proyectos.html">Proyectos</a>
+            <a href="../../under-construction.html">Textos</a>
+            <a href="../../shop/shop.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="container">
+        <header class="main-header">
+            <img src="../headerDDA.png" id="headerIMG" alt="">
+            <h1><span>MICUERPO</span>ELECTRICO</h1>
+        </header>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="tutorialModerno.css"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+        <div class="row" style="justify-content: center; padding: 2rem;">
+            <iframe width="1042" height="586" src="https://www.youtube.com/embed/yfS1bNBM_3Y"
+                title="Diego De Aduriz - Tutorial" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </main>
+
+
+    <script src="../../navbar.js"></script>
 </body>
 
 </html>

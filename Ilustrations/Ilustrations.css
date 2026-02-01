@@ -32,10 +32,10 @@ body {
 
 /* Grid Layout */
 .gallery-grid {
-    grid-auto-rows: 300px ;
+    grid-auto-rows: 300px;
     gap: 8px;
-      
-    margin-left: 292px; /* Reduce margin for smaller screens */
+    margin: 40px auto;
+    max-width: 1200px;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -112,7 +112,8 @@ body {
     cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -132,7 +133,7 @@ body {
     right: 20px;
 }
 
-.modal:hover .prev, 
+.modal:hover .prev,
 .modal:hover .next {
     display: block;
 }
@@ -140,24 +141,22 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .gallery-grid {
-        margin-left: 200px;       
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust column size */
-        gap: 5px; /* Reduce gap between images */
+        margin: 20px auto;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        /* Adjust column size */
+        gap: 5px;
+        /* Reduce gap between images */
         grid-auto-rows: 199px !important;
-        gap: 0px !important;
     }
 }
 
 @media (max-width: 480px) {
     .gallery-grid {
-        padding-top: 5rem;
-        grid-auto-rows: 199px !important;
-        margin-left: 54px;
-        padding-right: 4rem;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for mobile */
-        gap: 3px; /* Minimal gap for smaller screens */
+        margin: 10px auto;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        /* Adjust for mobile */
+        gap: 3px;
+        /* Minimal gap for smaller screens */
+        grid-auto-rows: 150px !important;
     }
 }
-
-
-

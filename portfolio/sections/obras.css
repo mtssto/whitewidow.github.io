@@ -130,3 +130,26 @@ footer p {
   font-size: 1rem !important;
   color: #9b8d8d !important;
 }
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .digital-grid,
+  .ilustraciones-grid {
+    columns: 1;
+    column-gap: 0;
+  }
+}

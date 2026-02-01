@@ -176,10 +176,11 @@ body.has-navbar {
     text-transform: uppercase;
     padding: 10px;
     border-radius: 6px;
+    background: transparent !important;
 }
 
 .navbar-drawer__links a:hover {
-    background: #f5f5f5;
+    background: #f5f5f5 !important;
 }
 
 /* Overlay */
@@ -362,7 +363,7 @@ body.has-navbar {
 
 .navbar-drawer__links .dropdown-content {
     position: static;
-    display: none;
+    display: none !important;
     background: transparent;
     box-shadow: none;
     padding-left: 20px;
@@ -373,8 +374,8 @@ body.has-navbar {
 }
 
 .navbar-drawer__links .navbar__item.is-active .dropdown-content {
-    display: block;
-    max-height: 500px;
+    display: block !important;
+    max-height: 1000px;
 }
 
 .navbar-drawer__links .dropdown-content a {

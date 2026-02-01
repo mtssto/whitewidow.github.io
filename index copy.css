@@ -44,10 +44,15 @@ footer p {
 
 /* Main Content Styling */
 main.container {
-  margin-left: 220px;
   padding: 20px;
-  max-width: calc(100% - 220px);
-  margin-bottom: 80px;
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+}
+
+.has-navbar main.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
 }
 
 /* Cards Grid Layout */
@@ -230,9 +235,11 @@ main.container {
   }
 
   main.container {
-    margin-left: 48px;
-    max-width: calc(118% - 160px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
     margin-bottom: 50px;
+    padding: 10px;
   }
 
   .cards {
@@ -268,8 +275,10 @@ main.container {
   }
 
   main.container {
-    margin-left: 45px;
-    max-width: calc(128% - 187px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding-top: 60px;
   }
 
   .sidebar.active ul {
