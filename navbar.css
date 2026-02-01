@@ -188,7 +188,9 @@ nav.navbar__links,
         display: none;
     }
 
-    display: flex;
+    .navbar__burger {
+        display: flex;
+    }
 }
 
 /* Dropdown Support */
