@@ -3,188 +3,81 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index copy.css">
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-  <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+  <title>Diego de Aduriz</title>
+  <link rel="stylesheet" href="gallery-style.css">
+  <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
 
-  <!-- <header class="main-header">
-    <h1><a href="./index.html"><span>Diego de Aduriz</span></a></h1>
-  </header> -->
+  <header class="navbar">
+    <a class="navbar__brand" href="./index.html">Diego de Aduriz</a>
 
-  <!-- Sidebar Navigation -->
-  <button id="burger-menu" class="burger-menu">
-    &#9776;
-  </button>
-  <div class="sidebar">
-    <ul>
-      <ul>
-        <li  class="li-title"><a href="./index.html">DIEGO DE ADURIZ</a></li>
-        <li><a href="./about/about.html" id="about-link">About</a></li>
-        <li><a href="./press/press.html" id="press-link" >Press</a></li>
-        <li><a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
-          <ul class="dropdown-content">
-            <li><a href="./portfolio/sections/microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
-            <li><a href="./portfolio/sections/elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
-            <li><a href="./portfolio/sections/laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
-            <li><a href="./portfolio/sections/miCuerpoElectrico.html">MI CUERPO ELÉCTRICO</a></li>
-            <li><a href="./portfolio/sections/friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
-            <li><a href="./portfolio/sections/muralSeptimo.html">MURAL SÉP7IMO</a></li>
-            <li><a href="./portfolio/sections/todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
-            <li><a href="./portfolio/sections/lasNaves.html">LAS NAVES</a></li>
-          </ul></li>
-        <li><a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
-          <ul class="dropdown-content">
-            <li><a href="./portfolio/sections/obras.html">PASTELES</a></li>
-            <li><a href="./portfolio/sections/obras.html">DIGITAL</a></li>
-          </ul></li>
-          <li><a href="./portfolio/sections/videos.html" id="proyectos-link">Videos</a></li>
-        <li><a href="./under-construction.html" id="proyectos-link">Proyectos</a></li>
-        <li><a href="./under-construction.html" id="textos-link">Textos</a></li>
-        <li><a href="./under-construction.html" id="shop-link">Shop</a></li>
-        <li><a href="./under-construction.html" id="contacto-link">Contacto</a></li>
-      </ul>
-  </div>
-  <div id="overlay" class="overlay"></div>
+    <nav class="navbar__links" aria-label="Main navigation">
+      <a href="./about/about.html">About</a>
+      <a href="./press/press.html">Press</a>
+      <a href="./muestras/muestras.html">Muestras</a>
 
-
-  <main class="container clearfix">
-    <div class="cards">
-      <!-- Card 1 -->
-      <div class="card" data-aos="fade-right">
-        <a href="./portfolio/sections/microcentroCuenta.html" >
-          <img src="./portfolio/sections/Microcentro cuenta/1.jpg" alt="MICROCENTRO CUENTA">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>MICROCENTRO CUENTA</span></b>
+      <!-- Obras Dropdown -->
+      <div class="navbar__item">
+        <a href="./portfolio/sections/obras.html">Obras</a>
+        <div class="dropdown-content">
+          <a href="./portfolio/sections/obras.html#pasteles">Pasteles</a>
+          <a href="./portfolio/sections/obras.html#digital">Digital</a>
+          <a href="./portfolio/sections/obras.html#ilustraciones">Ilustraciones</a>
+          <a href="./portfolio/sections/obras.html#videos">Videos</a>
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="card" data-aos="fade-right">
-        <a href="./portfolio/sections/elefantesEnElBazar.html" style="flex: 1;">
-          <img src="./portfolio/sections/Legislatura/10.jpg" alt="ELEFANTES EN EL BAZAR">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>ELEFANTES EN EL BAZAR</span></b>
-        </div>
-      </div>
+      <a href="./under-construction.html">Proyectos</a>
+      <a href="./under-construction.html">Textos</a>
+      <a href="./under-construction.html">Shop</a>
+      <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+    </nav>
 
-      <!-- Card 3 -->
-      <div class="card large" data-aos="fade-right">
-        <a href="./portfolio/sections/laLlaveyElTestigo.html" style="flex: 1;">
-          <img src="https://museomacba.org/wp-content/uploads/2022/08/MACBA_Diego-de-Aduriz_Flyer-cuadrado-1080x1080px_01B-min.jpg" alt="LA LLAVE Y EL TESTIGO">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>LA LLAVE Y EL TESTIGO</span></b>
-        </div>
-      </div>
+    <button class="navbar__burger" id="navBurger" type="button" aria-label="Open menu" aria-controls="navDrawer"
+      aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-      <!-- Card 4 -->
-      <div class="card" data-aos="fade-right">
-        <a href="./portfolio/sections/miCuerpoElectrico.html" style="flex: 1;">
-          <img src="./portfolio/sections/micuerpoelectrico/FACHADA+ADURIZ+2.jpeg" alt="MI CUERPO ELÉCTRICO">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>MI CUERPO ELÉCTRICO</span></b>
-        </div>
-      </div>
 
-      <!-- Card 5 -->
-      <div class="card" data-aos="fade-right" style="flex: 1;">
-        <a href="./portfolio/sections/obras.html">
-          <img src="https://66.media.tumblr.com/124c889624a4192f3b014f415741a6f7/tumblr_o71504P2nA1r74tb2o1_1280.jpg" alt="OBRAS">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>OBRAS</span></b>
-        </div>
-      </div>
+  <div class="navbar-overlay" id="navOverlay" hidden></div>
 
-      <!-- Card 6 -->
-      <div class="card large" data-aos="fade-right">
-        <a href="./portfolio/sections/digitalArt.html" style="flex: 1;">
-          <img src="https://64.media.tumblr.com/8b3509d1a53475d5ff7ce6d8e1728c08/tumblr_n27g36FCcd1r74tb2o1_640.jpg" alt="ARTE DIGITAL">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>ARTE DIGITAL</span></b>
-        </div>
-      </div>
-
-      <!-- Card 7 -->
-      <div class="card" data-aos="fade-up">
-        <a href="./portfolio/sections/friezeArt.html" style="flex: 1;">
-          <img src="./portfolio/sections/Frieze Art Fair -London 2008/1.jpg" alt="FRIEZE ART FAIR-LONDON">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>FRIEZE ART FAIR-LONDON</span></b>
-        </div>
-      </div>
-
-      <!-- Card 8 -->
-      <div class="card" data-aos="fade-right">
-        <a href="./portfolio/sections/muralSeptimo.html" style="flex: 1;">
-          <img src="./portfolio/sections/MURAL SEP7IMO/27.jpg" alt="MURAL SÉP7IMO">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>MURAL SÉP7IMO</span></b>
-        </div>
-      </div>
-
-      <!-- Card 9 -->
-      <div class="card" data-aos="fade-up">
-        <a href="./portfolio/sections/todoLoQueBrillaEsOro.html" style="flex: 1;">
-          <img src="./portfolio/sections/TODO LO QUE BRILLA ES ORO/2.jpg" alt="TODO LO QUE BRILLA ES ORO">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>TODO LO QUE BRILLA ES ORO</span></b>
-        </div>
-      </div>
-
-      <!-- Card 10 -->
-      <div class="card" data-aos="fade-up">
-        <a href="./portfolio/sections/lasNaves.html" style="flex: 1;">
-          <img src="./portfolio/sections/Las Naves/1.jpg" alt="LAS NAVES">
-        </a>
-        <div class="feature-card-footer">
-          <b><span>LAS NAVES</span></b>
-        </div>
-      </div>
-
-      <!-- Card 11 -->
-      <div class="card" data-aos="fade-up">
-        <a href="./portfolio/sections/videos.html" style="flex: 1;">
-          <img src="./video.PNG" alt="VIDEOS">
-        </a>
-        <div href="./portfolio/sections/videos.html" class="feature-card-footer">
-          <b><span>VIDEOS</span></b>
-        </div>
-      </div>
+  <aside class="navbar-drawer" id="navDrawer" aria-label="Mobile menu">
+    <div class="navbar-drawer__head">
+      <a class="navbar__brand" href="./index.html">Diego de Aduriz</a>
+      <button class="navbar-drawer__close" id="navClose" type="button" aria-label="Close menu">✕</button>
     </div>
-  </main>
-  <footer>
-    <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
-  </footer>
-  <!-- Initialize AOS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    function toggleSidebar() {
-  document.querySelector('.sidebar').classList.toggle('open');
-}
-  </script>
 
-  <script src="index.js"></script>
+    <nav class="navbar-drawer__links">
+      <a href="./about/about.html">About</a>
+      <a href="./press/press.html">Press</a>
+      <a href="./muestras/muestras.html">Muestras</a>
 
+      <!-- Obras Section in Drawer -->
+      <a href="./portfolio/sections/obras.html">Obras</a>
+      <a href="./portfolio/sections/obras.html#pasteles" style="font-size: 0.9rem; padding-left: 20px;">- Pasteles</a>
+      <a href="./portfolio/sections/obras.html#digital" style="font-size: 0.9rem; padding-left: 20px;">- Digital</a>
+      <a href="./portfolio/sections/obras.html#ilustraciones" style="font-size: 0.9rem; padding-left: 20px;">-
+        Ilustraciones</a>
+      <a href="./portfolio/sections/obras.html#videos" style="font-size: 0.9rem; padding-left: 20px;">- Videos</a>
+
+      <a href="./under-construction.html">Proyectos</a>
+      <a href="./under-construction.html">Textos</a>
+      <a href="./under-construction.html">Shop</a>
+      <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+    </nav>
+  </aside>
+
+  <div class="has-navbar">
+    <div id="loading-indicator"></div>
+    <div id="art-canvas"></div>
+  </div>
+
+  <script src="navbar.js"></script>
+  <script src="immersive-gallery.js"></script>
 </body>
 
 </html>

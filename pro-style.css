@@ -1,0 +1,202 @@
+/* Professional Gallery Style */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --text-light: #666666;
+    --accent-gradient: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    --grid-gap: 40px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Cormorant+Garamond:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header - Minimalist */
+header {
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--text-color);
+}
+
+/* Subtle rainbow underline on hover */
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Main Grid Layout */
+main {
+    padding: 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--grid-gap);
+    padding-bottom: 100px;
+}
+
+/* Portfolio Item Cards */
+.gallery-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    group: pointer;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #f5f5f5;
+}
+
+/* The Subtle Art Reference: Rainbow Border on Hover */
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border: 4px solid transparent;
+    transition: border-color 0.4s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover .image-container::before {
+    /* Using border-image for gradient border */
+    border-image: var(--accent-gradient);
+    border-image-slice: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
+    filter: grayscale(10%) contrast(95%);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+    filter: grayscale(0%) contrast(105%);
+}
+
+/* Typography Details */
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    transition: border-color 0.3s;
+}
+
+.gallery-item:hover .item-info {
+    border-top-color: #333;
+}
+
+.item-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.item-category {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #eee;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

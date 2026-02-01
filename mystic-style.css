@@ -1,0 +1,207 @@
+/* Mystic Art Style - Based on User Artwork */
+
+:root {
+    --mystic-white: rgba(255, 255, 255, 0.85);
+    --mystic-glass: rgba(255, 255, 255, 0.15);
+    --mystic-dark: #1a1a1a;
+    --mystic-accent: #4a0e4e;
+    /* Deep purple from top of image */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Patrick Hand', cursive;
+    /* Handwritten style like the art */
+    color: var(--mystic-dark);
+}
+
+/* The Background Art */
+.mystic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('mystic-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* UI Overlay Layer */
+.mystic-ui {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    padding: 2rem;
+}
+
+/* Navigation - Floating Text */
+.nav-corner {
+    z-index: 10;
+}
+
+.nav-top-left {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+}
+
+.nav-top-right {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: right;
+}
+
+.nav-bottom-left {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: left;
+    align-self: end;
+}
+
+.nav-bottom-right {
+    grid-column: 3;
+    grid-row: 3;
+    text-align: right;
+    align-self: end;
+}
+
+.mystic-link {
+    display: block;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--mystic-dark);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mystic-link:hover {
+    transform: scale(1.1) rotate(-3deg);
+    color: #c94e4e;
+    /* Red from the art */
+}
+
+/* Floating Content / Modal for Projects */
+.mystic-content-area {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-panel {
+    background: var(--mystic-glass);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    display: none;
+    /* Hidden by default, shown on interaction */
+}
+
+.glass-panel.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glass-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.glass-list li {
+    margin: 1rem 0;
+}
+
+.glass-list a {
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Initial "Enter" or "Title" */
+.main-title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4rem;
+    text-align: center;
+    color: var(--mystic-dark);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    animation: breathe 3s infinite ease-in-out;
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Subtitles mimicking the art's text */
+.art-text {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transform: rotate(var(--rot));
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .mystic-ui {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-top-right,
+    .nav-bottom-left,
+    .nav-bottom-right {
+        grid-column: 1;
+        text-align: center;
+    }
+
+    .nav-top-left {
+        text-align: center;
+    }
+}

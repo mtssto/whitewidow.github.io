@@ -16,54 +16,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-left: 180px; /* Adjust for sidebar width */
-}
-
-/* Sidebar */
-.sidebar {
-    width: 180px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #f4f4f4;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.6rem;
-}
-
-/* Encabezado principal */
-.main-header {
-    padding: 1rem;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
-    color: black; /* Color del texto negro */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.main-header h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.main-header h1 span {
-    color: black;
+    padding-top: 60px;
+    /* Space for fixed navbar */
+    padding-left: 0;
 }
 
 /* Mensaje de construcción */
@@ -82,44 +37,14 @@ body {
 .construction-message span {
     font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.construction-message p {
-    font-size: 2rem;
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Courier New', Courier, monospace;
+    /* Match navbar vibe if desired, or keep as is */
 }
 
 /* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
-    body {
-        padding-left: 0;
-    }
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    .sidebar ul li {
-        margin-bottom: 20px;
-    }
-
     .construction-message span {
         font-size: 2.5rem;
-    }
-
-    .construction-message p {
-        font-size: 1.5rem;
-    }
-
-    .main-header h1 {
-        font-size: 2.5rem;
-    }
-
-    .sidebar.active ul {
-        padding-left: 28px !important;
     }
 }
 
@@ -127,20 +52,4 @@ body {
     .construction-message span {
         font-size: 1.7rem;
     }
-
-    .construction-message p {
-        font-size: 1.2rem;
-    }
-
-    .main-header h1 {
-        font-size: 2rem;
-    }
-    
-    .sidebar ul li a {
-        font-size: 1.4rem; /* Reduce font size for smaller screens */
-    }
-}
-
-.sidebar ul li {
-    padding: 0px 0 !important;
 }

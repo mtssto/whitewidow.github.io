@@ -1,5 +1,5 @@
 // Select all sidebar links
-const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
+const sidebarLinks = document.querySelectorAll('.xul-nav-links li a');
 
 // Function to handle link clicks
 function setActiveLink(link) {
@@ -26,7 +26,13 @@ window.addEventListener('load', function() {
 
   if (activeLink) {
     // Find the link with the href that matches the stored value and activate it
-    const linkToActivate = document.querySelector(`.sidebar ul li a[href="${activeLink}"]`);
+    // Handle potential differences in relative paths by checking endsWith
+    let linkToActivate = null;
+    sidebarLinks.forEach(link => {
+        if(link.getAttribute('href') === activeLink) {
+            linkToActivate = link;
+        }
+    });
 
     if (linkToActivate) {
       setActiveLink(linkToActivate);
@@ -34,24 +40,4 @@ window.addEventListener('load', function() {
   }
 });
 
-
-// Add toggle functionality with redirection
-document.querySelectorAll('.dropdown-toggle').forEach(item => {
-  item.addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent the default behavior of instant redirection
-    
-    let parentLi = this.parentElement;
-    
-    // Toggle the "open" class on the parent <li>
-    parentLi.classList.toggle('open');
-
-    // Redirect after a small delay to allow the dropdown to show first
-    const href = this.getAttribute('href');
-    
-    // Adding delay before redirection so the user sees the dropdown first
-    setTimeout(() => {
-      window.location.href = href;
-    }, 300); // Adjust delay time as needed (300ms here)
-  });
-});
 

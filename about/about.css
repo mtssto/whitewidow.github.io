@@ -2,24 +2,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 54px;
+  padding: 97px;
   padding-left: 3rem;
 }
 
 @media (min-width: 768px) {
   .container-fluid {
-    justify-content: flex-start; /* Content starts at the left on larger screens */
+    justify-content: flex-start;
+    /* Content starts at the left on larger screens */
     padding-left: 20rem !important;
-  } 
+  }
 }
 
 
 p {
-  margin-bottom: 1.5rem; /* Adjust the spacing */
-  line-height: 1.6; /* Optional: for readability */
+  margin-bottom: 1.5rem;
+  /* Adjust the spacing */
+  line-height: 1.6;
+  /* Optional: for readability */
 }
 
 .hero_par {
-  margin-bottom: 1.5rem; /* Adjust this value for more or less space */
-  line-height: 1.6; /* Optional: improves readability */
+  margin-bottom: 1.5rem;
+  /* Adjust this value for more or less space */
+  line-height: 1.6;
+  /* Optional: improves readability */
 }

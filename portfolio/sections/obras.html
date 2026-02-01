@@ -5,272 +5,527 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lightbox | Materialize</title>
+    <title>Diego de Aduriz | Obras</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="obras.css">
+    <link rel="stylesheet" href="../../navbar.css">
+    <style>
+        /* Section Spacing */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eee;
+        }
 
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-item {
+            width: 100%;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Digital/Ilustraciones Grid */
+        .digital-grid,
+        .ilustraciones-grid {
+            columns: 3 300px;
+            /* Masonry-like layout */
+            column-gap: 20px;
+        }
+
+        .digital-item,
+        .ilustracion-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+        }
+
+        .digital-item img,
+        .ilustracion-item img {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- <header class="custom-main-header">
-        <h1><a href="../../index.html"><span>Diego de Aduriz</span></a></h1>
+<body class="has-navbar">
+
+    <header class="navbar">
+        <a class="navbar__brand" href="../../index.html">Diego de Aduriz</a>
+
+        <nav class="navbar__links" aria-label="Main navigation">
+            <a href="../../about/about.html">About</a>
+            <a href="../../press/press.html">Press</a>
+            <a href="../../muestras/muestras.html">Muestras</a>
+
+            <!-- Obras Dropdown -->
+            <div class="navbar__item">
+                <a href="../../portfolio/sections/obras.html">Obras</a>
+                <div class="dropdown-content">
+                    <a href="#pasteles">Pasteles</a>
+                    <a href="#digital">Digital</a>
+                    <a href="#ilustraciones">Ilustraciones</a>
+                    <a href="#videos">Videos</a>
+                </div>
+            </div>
+
+            <a href="../../under-construction.html">Proyectos</a>
+            <a href="../../under-construction.html">Textos</a>
+            <a href="../../under-construction.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Open menu" aria-controls="navDrawer"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
-    
-    <nav class="custom-nav">
-        <ul>
-            <li><a href="../../about/about.html" id="about">ABOUT</a></li>
-            <li><a href="../../press/press.html" id="press">PRESS</a></li>
-            <li><a href="../../muestras/muestras.html" id="press">MUESTRAS</a></li>
-            <li><a href="../../portfolio/sections/obras.html" id="press">OBRAS</a></li>
-            <li><a href="../../under-construction.html" id="press">PROYECTOS</a></li>
-            <li><a href="../../under-construction.html" id="press">TEXTOS</a></li>
-            <li><a href="../../under-construction.html" id="press">SHOP</a></li>
-            <li><a href="../../under-construction.html" id="press">CONTACTO</a></li>
-        </ul>
-    </nav> -->
-    <button id="burger-menu" class="burger-menu">
-        &#9776;
-      </button>
-    <div class="sidebar">
-        <ul>
-          <li><a href="../../index.html">DIEGO DE ADURIZ</a></li>
-          <li><a href="../../about/about.html">About</a></li>
-          <li><a href="../../press/press.html">Press</a></li>
-          <li>
-            <a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
-            <ul class="custom-dropdown-content">
-                <li><a href="microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
-                <li><a href="elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
-                <li><a href="laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
-                <li><a href="miCuerpoElectrico.html">MI CUERPO ELÉCTRICO</a></li>
-                <li><a href="friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
-                <li><a href="muralSeptimo.html">MURAL SÉP7IMO</a></li>
-                <li><a href="todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
-                <li><a href="lasNaves.html">LAS NAVES</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
-              <ul class="custom-dropdown-content">
-                  <li><a href="digitalArt.html">DIGITALES</a></li>
-              </ul>
-         </li>  
-          <li><a href="../../under-construction.html">Proyectos</a></li>
-          <li><a href="../../under-construction.html">Textos</a></li>
-          <li><a href="../../under-construction.html">Shop</a></li>
-          <li><a href="../../under-construction.html">Contacto</a></li>
-        </ul>
-    </div>
-    <main class="container">  
-        <div>
-            <div>
-                <h1 class="titulo">PASTELES</h1>
-            </div>
-        </div>   
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/MG_0307.jpg" alt="Paisaje con oso, 2015" class="responsive-img materialboxed">
-                    <h1>Paisaje con oso, 2015</h1>
-                    <span>
-                        Aerosol y pastel sobre madera
-                        140 x 125 cm
-                    </span>
-                </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/MG_0312_1.jpg" alt="Rayo dorado, 2015" class="responsive-img materialboxed">
-                    <h1>Rayo dorado, 2015</h1>
-                    <span>
-                        Aerosol y pastel sobre madera
-                        140 x 82 cm
-                    </span>
-                </div>
-            </div>
-    
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/MG_0327.jpg" alt="Yukito, 2020" class="responsive-img materialboxed">
-                    <h1>Yukito, 2020</h1>
-                    <span>
-                        Pastel tiza sobre papel
-                        33 x 25 cm
-                    </span>
-                </div>
-            </div>
-            
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/MG_0328.jpg" alt="Gato celeste, 2020" class="responsive-img materialboxed">
-                    <h1>Gato celeste, 2020</h1>
-                    <span>
-                        Pastel tiza sobre papel
-                        35 x 25 cm
-                    </span>
-                </div>
-            </div>
-            
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/MG_1192.jpg" alt="Gato Merlín - 2021" class="responsive-img materialboxed">
-                    <h1>Gato Merlín - 2021</h1>
-                    <span>
-                        Pastel sobre tela
-                        205 x 210 cm
-                    </span>
-                </div>
-            </div>
-            
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/Diego+de+Aduriz+-+The+future+is+stupid+-+tecnica+mixta+sobre+papel+-+50+x+35+cm+-+2015.jpeg"
-                        alt="The future is stupid - 2015" class="responsive-img materialboxed">
-                    <h1>The future is stupid - 2015</h1>
-                    <span>
-                        Tecnica mixta sobre papel
-                        50 x 35 cm
-                    </span>
-                </div>
-            </div>
-    
-            <!-- Continue the same structure for remaining artworks -->
-            
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/mascara2.jpg" alt="Paisaje con máscara I - 2021" class="responsive-img materialboxed">
-                    <h1>Paisaje con máscara I - 2021</h1>
-                    <span>
-                        Pintura y collage sobre tela
-                        182 x 102 cm
-                    </span>
-                </div>
-            </div>
-            
-            <!-- Second column continues here -->
-            
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/Diego+de+Aduriz+-+Abecedario+-+150+x+100+cm+-+Pastel+y+acrilico+sobre+tela+-+2021.jpg"
-                        alt="Abecedario - 2021" class="responsive-img materialboxed">
-                    <h1>Abecedario - 2021</h1>
-                    <span>
-                        Pastel y acrílico sobre tela
-                        150 x 100 cm
-                    </span>
-                </div>
-            </div>
-            
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/Diego+de+Aduriz+-+Autoretrato+-+110+x+150+cm+-+Marcadores+sobre+papel+-+2007.jpg"
-                        alt="Autoretrato, 2007" class="responsive-img materialboxed">
-                    <h1>Autoretrato, 2007</h1>
-                    <span>
-                        Marcadores sobre papel
-                        110 x 150 cm
-                    </span>
-                </div>
-            </div>
 
-            <div class="col s12 m6">
-                <div class="info">
-                    <img src="../sections/obras/Diego+de+Aduriz+-+Autoretrato+-+110+x+150+cm+-+Marcadores+sobre+papel+-+2007.jpg"
-                        alt="Autoretrato, 2007" class="responsive-img materialboxed">
-                    <h1>Autoretrato, 2007</h1>
-                    <span>
-                        Marcadores sobre papel
-                        110 x 150 cm
-                    </span>
-                </div>
-            </div>
+    <div class="navbar-overlay" id="navOverlay" hidden></div>
 
-            <div class="col s12 m6">
-                <div class="info">
-                <img src="../sections/obras/Diego+de+Aduriz+-+Gato+arcoiris+-+100+x+65+cm+-++pastel+sobre+papel+-+2020.jpg"
-                    alt="" class="responsive-img materialboxed">
-                <h1>Gato Arcoiris, 2021</h1>
-                <span>
-                    Pastel sobre papel
-                    100 x 65 cm
-                    <!-- U$D 2.000
-                    Consultar -->
-                </span>
-            </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="info">
-                <img src="../sections/obras/Diego+de+Aduriz+-+Gato+cosmico+-+Pastel+tiza+-+80+x+110+cm+2013.jpeg"
-                    alt="" class="responsive-img materialboxed">
-                <h1>Gato cosmico, 2013</h1>
-                <span>
-                    Pastel tiza sobre papel
-                    80 x 110 cm
-                    <!-- VENDIDA -->
-                </span>
-            </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="info">
-                <img src="../sections/obras/Diego+de+Aduriz+-+Puerta+Azul+-+210+x+92+cm+-+Pintura+y+pastel+tiza+sobre+madera+-+2015_2017.jpeg"
-                    alt="" class="responsive-img materialboxed">
-                <h1>Puerta azul - 2015/2017</h1>
-                <span>
-                    Pintura y óleo pastel sobre madera
-                    210 x 92 cm
-                    <!-- U$D 6.000
-                    Consultar -->
-                </span>
-            </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="info">
-                <img src="../sections/obras/Diego+de+Aduriz+-+Sin+titulo+-+Tecnica+mixta+sobre+papel+-+34+x+24+cm+-+2012.jpg"
-                    alt="" class="responsive-img materialboxed">
-                <h1>Diablo contento - 2012</h1>
-                <span>
-                    Técnica mixta sobre papel
-                    34 x 24 cm
-                    <!-- U$D 500
-                    Consultar -->
-                </span>
-            </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="info">
-                <img src="../sections/obras/mascara1.jpg" alt="" class="responsive-img materialboxed">
-                <h1>Paisaje con máscara II - 2021</h1>
-                <span>
-                    182 x 102 cm
-                    Pintura y collage sobre tela
-                    <!-- U$D 4,500
-                    Consultar -->
-                </span>
-            </div>
-            </div>
+    <aside class="navbar-drawer" id="navDrawer" aria-label="Mobile menu">
+        <div class="navbar-drawer__head">
+            <a class="navbar__brand" href="../../index.html">Diego de Aduriz</a>
+            <button class="navbar-drawer__close" id="navClose" type="button" aria-label="Close menu">✕</button>
         </div>
-            <!-- Continue for other images in a similar fashion -->
-        </div>
+
+        <nav class="navbar-drawer__links">
+            <a href="../../about/about.html">About</a>
+            <a href="../../press/press.html">Press</a>
+            <a href="../../muestras/muestras.html">Muestras</a>
+
+            <!-- Obras Section in Drawer -->
+            <a href="../../portfolio/sections/obras.html">Obras</a>
+            <!-- Simple indentation for mobile sub-links/anchors -->
+            <a href="#pasteles" style="font-size: 0.9rem; padding-left: 20px;">- Pasteles</a>
+            <a href="#digital" style="font-size: 0.9rem; padding-left: 20px;">- Digital</a>
+            <a href="#ilustraciones" style="font-size: 0.9rem; padding-left: 20px;">- Ilustraciones</a>
+            <a href="#videos" style="font-size: 0.9rem; padding-left: 20px;">- Videos</a>
+
+            <a href="../../under-construction.html">Proyectos</a>
+            <a href="../../under-construction.html">Textos</a>
+            <a href="../../under-construction.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="container">
+
+        <!-- SECTION 1: PASTELES -->
+        <section id="pasteles">
+            <h1 class="section-title">Pasteles</h1>
+            <div class="row">
+                <!-- Row 1 -->
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/MG_0307.jpg" alt="Paisaje con oso, 2015"
+                            class="responsive-img materialboxed">
+                        <h1>Paisaje con oso, 2015</h1>
+                        <span>Aerosol y pastel sobre madera <br> 140 x 125 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20Paisaje%20con%20oso,%202015"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/MG_0312_1.jpg" alt="Rayo dorado, 2015"
+                            class="responsive-img materialboxed">
+                        <h1>Rayo dorado, 2015</h1>
+                        <span>Aerosol y pastel sobre madera <br> 140 x 82 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20Rayo%20dorado,%202015"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/MG_0327.jpg" alt="Yukito, 2020"
+                            class="responsive-img materialboxed">
+                        <h1>Yukito, 2020</h1>
+                        <span>Pastel tiza sobre papel <br> 33 x 25 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20Yukito,%202020"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/MG_0328.jpg" alt="Gato celeste, 2020"
+                            class="responsive-img materialboxed">
+                        <h1>Gato celeste, 2020</h1>
+                        <span>Pastel tiza sobre papel <br> 35 x 25 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20Gato%20celeste,%202020"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+                <!-- More Items -->
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/MG_1192.jpg" alt="Gato Merlín - 2021"
+                            class="responsive-img materialboxed">
+                        <h1>Gato Merlín - 2021</h1>
+                        <span>Pastel sobre tela <br> 205 x 210 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20Gato%20Merlín%20-%202021"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/Diego+de+Aduriz+-+The+future+is+stupid+-+tecnica+mixta+sobre+papel+-+50+x+35+cm+-+2015.jpeg"
+                            alt="The future is stupid - 2015" class="responsive-img materialboxed">
+                        <h1>The future is stupid - 2015</h1>
+                        <span>Tecnica mixta sobre papel <br> 50 x 35 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20The%20future%20is%20stupid%20-%202015"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/mascara2.jpg" alt="Paisaje con máscara I - 2021"
+                            class="responsive-img materialboxed">
+                        <h1>Paisaje con máscara I - 2021</h1>
+                        <span>Pintura y collage sobre tela <br> 182 x 102 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20Paisaje%20con%20máscara%20I%20-%202021"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="info">
+                        <img src="../sections/obras/Diego+de+Aduriz+-+Abecedario+-+150+x+100+cm+-+Pastel+y+acrilico+sobre+tela+-+2021.jpg"
+                            alt="Abecedario - 2021" class="responsive-img materialboxed">
+                        <h1>Abecedario - 2021</h1>
+                        <span>Pastel y acrílico sobre tela <br> 150 x 100 cm</span>
+                        <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20la%20obra:%20Abecedario%20-%202021"
+                            class="btn-consultar" target="_blank">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DIGITAL ART -->
+        <section id="digital">
+            <h1 class="section-title">Digital Art</h1>
+            <div class="digital-grid">
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/c29b535685cd870a467bdc6eb0d60ef2/tumblr_n27f1t2IvP1r74tb2o1_1280.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/c3123779be189a5a8737b190f595574a/tumblr_n275dsU7Xr1r74tb2o1_250.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/9e5c31eb51ce7e28c7982f271746f302/tumblr_n275eaKQwf1r74tb2o1_640.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/15528b2c6461bb6795b432f0b5a67bd3/tumblr_n2757yIlWR1r74tb2o1_540.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/580282830fff5598f2a6aa737655436b/tumblr_modrwpNIsq1rk6s0ao1_500.gifv"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/1bbdbeb27cf478c0bbe5808ccd9f5be9/tumblr_n2751mDCRn1r74tb2o1_1280.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/f5ed271a1d67b251893447f478373918/tumblr_n0pekqyXfc1r74tb2o1_540.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/a0170c683d6f30104d1617b318606594/tumblr_n1ifoet4hU1r74tb2o1_640.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="digital-item"><img
+                        src="https://64.media.tumblr.com/a424e6004e68c0c70b556d0decea4640/tumblr_mik6rjkNBd1r74tb2o1_1280.jpg"
+                        alt="" class="materialboxed" />
+                    <a href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20obra%20digital"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ILUSTRACIONES -->
+        <section id="ilustraciones">
+            <h1 class="section-title">Ilustraciones</h1>
+            <div class="ilustraciones-grid">
+                <div class="ilustracion-item"><img src="../../Ilustrates/aaaa.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/aaaaa.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/aaaaaa.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/aaaaaaa.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/aaaaaaaa.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/aaaaaaaaa.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/b.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/bb.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/bbb.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/bbbb.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/bbbbb.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/bbbbbbb.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/bbbbbbbb.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/bbbbbbbbbb.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a>
+                </div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/c.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/cc.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/ccc.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/cccc.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/ccccc.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu1.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu10.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu11.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu12.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu13.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu14.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu15.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu16.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu17.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu18.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu19.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu2.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu3.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu4.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu5.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu6.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu7.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu8.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+                <div class="ilustracion-item"><img src="../../Ilustrates/dibu9.jpg" alt="" class="materialboxed"><a
+                        href="https://wa.me/5491168750007?text=Hola,%20quisiera%20consultar%20por%20esta%20ilustracion"
+                        class="btn-consultar" target="_blank">Consultar</a></div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: VIDEOS -->
+        <section id="videos">
+            <h1 class="section-title">Videos</h1>
+            <div class="video-grid">
+                <!-- Using paths found in user's directory -->
+                <div class="video-item"><video controls>
+                        <source src="videos/ddavideo1.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda3.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda4.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda5.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda6.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda7.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda8.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda9.mp4" type="video/mp4">
+                    </video></div>
+
+                <div class="video-item"><video controls>
+                        <source src="videos/dda10.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda11.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda12.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda13.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda14.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda15.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda16.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda17.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda18.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda19.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda20.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda21.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda22.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda23.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda24.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda25.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda26.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda27.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda28.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda29.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda30.mp4" type="video/mp4">
+                    </video></div>
+                <div class="video-item"><video controls>
+                        <source src="videos/dda31.mp4" type="video/mp4">
+                    </video></div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
-      </footer>
+    </footer>
 
-      <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div class="modal-caption" id="modal-title"></div> <!-- Title for the modal -->
-    </div>
-    
-
-    <script src="obras.js"></script>
+    <!-- Materialize for Materialboxed images -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="dropdown.js">
-        
+    <script src="../../navbar.js"></script>
+    <script>
+        // Initialize Materialize components
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems, {});
+        });
     </script>
 </body>
 

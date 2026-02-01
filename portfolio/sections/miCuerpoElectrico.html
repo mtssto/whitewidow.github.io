@@ -5,62 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diego de Aduriz | Mi Cuerpo Eléctrico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="./miCuerpoElectrico.css">
     <link rel="stylesheet" href="../../index copy.css">
+    <link rel="stylesheet" href="../../navbar.css">
 </head>
 
-<body class="bodyMicuerpo">
-    
-    <!-- <div>
-        <nav class="custom-nav">
-            <ul>
-                <li><a href="../../about/about.html" id="about">ABOUT</a></li>
-                <li><a href="../../press/press.html" id="press">PRESS</a></li>
-                <li><a href="../../muestras/muestras.html" id="press">MUESTRAS</a></li>
-                <li><a href="../../portfolio/sections/obras.html" id="press">OBRAS</a></li>
-                <li><a href="../../under-construction.html" id="press">PROYECTOS</a></li>
-                <li><a href="../../under-construction.html" id="press">TEXTOS</a></li>
-                <li><a href="../../under-construction.html" id="press">SHOP</a></li>
-                <li><a href="../../under-construction.html" id="press">CONTACTO</a></li>
-            </ul>
+<body class="bodyMicuerpo has-navbar">
+
+    <header class="navbar">
+        <a class="navbar__brand" href="../../index.html">Diego de Aduriz</a>
+
+        <nav class="navbar__links" aria-label="Main navigation">
+            <a href="../../about/about.html">About</a>
+            <a href="../../press/press.html">Press</a>
+            <a href="../../muestras/muestras.html">Muestras</a>
+            <a href="../../portfolio/sections/obras.html">Obras</a>
+            <a href="../../under-construction.html">Proyectos</a>
+            <a href="../../under-construction.html">Textos</a>
+            <a href="../../under-construction.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
         </nav>
-    </div> -->
-    <button id="burger-menu" class="burger-menu">
-        &#9776;
-      </button>
-    <div class="sidebar">
-        <ul>
-          <li><a href="../../index.html">DIEGO DE ADURIZ</a></li>
-          <li><a href="../../about/about.html">About</a></li>
-          <li><a href="../../press/press.html">Press</a></li>
-          <li>
-            <a href="#" id="muestras-link" class="dropdown-toggle">Muestras</a>
-            <ul class="custom-dropdown-content">
-                <li><a href="microcentroCuenta.html">MICROCENTRO CUENTA</a></li>
-                <li><a href="elefantesEnElBazar.html">ELEFANTES EN EL BAZAR</a></li>
-                <li><a href="laLlaveyElTestigo.html">LA LLAVE Y EL TESTIGO</a></li>
-                <li><a href="friezeArt.html">FRIEZE ART FAIR-LONDON</a></li>
-                <li><a href="muralSeptimo.html">MURAL SÉP7IMO</a></li>
-                <li><a href="todoLoQueBrillaEsOro.html">TODO LO QUE BRILLA ES ORO</a></li>
-                <li><a href="lasNaves.html">LAS NAVES</a></li>
-            </ul>
-          </li> 
-          <li>
-            <a href="#" id="obras-link" class="dropdown-toggle">Obras</a>
-              <ul class="custom-dropdown-content">
-                  <li><a href="obras.html">PASTELES</a></li>
-                  <li><a href="digitalArt.html">DIGITAL</a></li>
-              </ul>
-         </li> 
-          <li><a href="../../under-construction.html">Proyectos</a></li>
-          <li><a href="../../under-construction.html">Textos</a></li>
-          <li><a href="../../under-construction.html">Shop</a></li>
-          <li><a href="../../under-construction.html">Contacto</a></li>
-        </ul>
-    </div>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Open menu" aria-controls="navDrawer"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="navbar-overlay" id="navOverlay" hidden></div>
+
+    <aside class="navbar-drawer" id="navDrawer" aria-label="Mobile menu">
+        <div class="navbar-drawer__head">
+            <a class="navbar__brand" href="../../index.html">Diego de Aduriz</a>
+            <button class="navbar-drawer__close" id="navClose" type="button" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav class="navbar-drawer__links">
+            <a href="../../about/about.html">About</a>
+            <a href="../../press/press.html">Press</a>
+            <a href="../../muestras/muestras.html">Muestras</a>
+            <a href="../../portfolio/sections/obras.html">Obras</a>
+            <a href="../../under-construction.html">Proyectos</a>
+            <a href="../../under-construction.html">Textos</a>
+            <a href="../../under-construction.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+    </aside>
 
     <main class="container">
         <div>
@@ -68,7 +61,7 @@
                 <h1 class="titulo">MI CUERPO ELÉCTRICO</h1>
                 <h3 class="sub-title">Aldo De Sousa</h3>
             </div>
-            
+
         </div>
         <div class="row galeria">
             <div class="column column-4" data-aos="fade-left">
@@ -79,7 +72,7 @@
                     <img src="../sections/micuerpoelectrico/MG_1185.jpeg" alt="" class="responsive-img materialboxed">
                 </div>
             </div>
-        
+
             <div class="column column-4" data-aos="fade-left">
                 <div class="material-placeholder">
                     <img src="../sections/micuerpoelectrico/MG_1187.jpeg" alt="" class="responsive-img materialboxed">
@@ -115,15 +108,16 @@
     </main>
     <footer>
         <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
-      </footer>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../js/main.js"></script>
-    <script src="dropdown.js"></script>
+    <!-- <script src="dropdown.js"></script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="../../navbar.js"></script>
 </body>
 
 </html>
