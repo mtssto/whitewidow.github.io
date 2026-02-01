@@ -1,0 +1,357 @@
+/* General Proyectos Styles */
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.proyectos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+}
+
+/* Hero Section */
+.proyectos-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    margin-bottom: 60px;
+}
+
+.proyectos-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0 0 20px 0;
+    color: #000;
+}
+
+.proyectos-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 60px;
+    padding: 20px 0;
+}
+
+/* Project Card */
+.project-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.project-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.project-name {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #000;
+}
+
+.project-year {
+    font-size: 1rem;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+/* Website Preview */
+.project-preview {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.website-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .website-iframe {
+    transform: scale(1.02);
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .preview-overlay {
+    opacity: 1;
+}
+
+.btn-visit {
+    padding: 15px 40px;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-visit:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Project Info */
+.project-info {
+    padding: 30px;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+    color: #000;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0 0 30px 0;
+}
+
+/* Project Credits */
+.project-credits {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 3px solid #333;
+}
+
+.project-credits h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+    color: #000;
+}
+
+.project-credits ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-credits li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.project-credits li strong {
+    color: #000;
+    font-weight: 700;
+}
+
+/* Project Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.tag {
+    padding: 6px 15px;
+    background: #000;
+    color: #fff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+/* Project Link Button */
+.btn-project-link {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #333;
+    background: transparent;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
+
+.btn-project-link:hover {
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Coming Soon Card */
+.project-card--coming-soon {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border: 2px dashed #ccc;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card--coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.coming-soon-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.coming-soon-icon {
+    font-size: 5rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.coming-soon-text {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin: 0 0 10px 0;
+}
+
+.coming-soon-subtitle {
+    font-size: 0.9rem;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    margin-top: 80px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-preview {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos-title {
+        font-size: 2.5rem;
+    }
+
+    .proyectos-subtitle {
+        font-size: 1rem;
+    }
+
+    .project-name {
+        font-size: 1.5rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-preview {
+        height: 300px;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .projects-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .proyectos-hero {
+        padding: 40px 20px 30px;
+    }
+
+    .proyectos-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .project-preview {
+        height: 250px;
+    }
+
+    .btn-visit {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}

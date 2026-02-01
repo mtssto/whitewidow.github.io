@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diego de Aduriz | Proyectos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="proyectos.css">
+    <link rel="stylesheet" href="../navbar.css">
+</head>
+
+<body class="has-navbar">
+
+    <header class="navbar">
+        <a class="navbar__brand" href="../index.html">Diego de Aduriz</a>
+
+        <nav class="navbar__links" aria-label="Main navigation">
+            <a href="../about/about.html">About</a>
+            <a href="../press/press.html">Press</a>
+            <!-- Muestras Dropdown -->
+            <div class="navbar__item">
+                <a href="../muestras/muestras.html">Muestras</a>
+                <div class="dropdown-content">
+                    <a href="../portfolio/sections/microcentroCuenta.html">Microcentro Cuenta</a>
+                    <a href="../portfolio/sections/elefantesEnElBazar.html">Elefantes en el Bazar</a>
+                    <a href="../portfolio/sections/laLlaveyElTestigo.html">La Llave y el Testigo</a>
+                    <a href="../portfolio/sections/miCuerpoElectrico.html">Mi Cuerpo Eléctrico</a>
+                    <a href="../portfolio/sections/friezeArt.html">Frieze Art Fair</a>
+                    <a href="../portfolio/sections/muralSeptimo.html">Mural Séptimo</a>
+                    <a href="../portfolio/sections/todoLoQueBrillaEsOro.html">Todo lo que brilla es oro</a>
+                    <a href="../portfolio/sections/lasNaves.html">Las Naves</a>
+                </div>
+            </div>
+
+            <!-- Obras Dropdown -->
+            <div class="navbar__item">
+                <a href="../portfolio/sections/obras.html">Obras</a>
+                <div class="dropdown-content">
+                    <a href="../portfolio/sections/obras.html#pasteles">Pasteles</a>
+                    <a href="../portfolio/sections/obras.html#digital">Digital</a>
+                    <a href="../portfolio/sections/obras.html#ilustraciones">Ilustraciones</a>
+                    <a href="../portfolio/sections/obras.html#videos">Videos</a>
+                </div>
+            </div>
+
+            <a href="proyectos.html">Proyectos</a>
+            <a href="../under-construction.html">Textos</a>
+            <a href="../shop/shop.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Open menu" aria-controls="navDrawer"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="navbar-overlay" id="navOverlay" hidden></div>
+
+    <aside class="navbar-drawer" id="navDrawer" aria-label="Mobile menu">
+        <div class="navbar-drawer__head">
+            <a class="navbar__brand" href="../index.html">Diego de Aduriz</a>
+            <button class="navbar-drawer__close" id="navClose" type="button" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav class="navbar-drawer__links">
+            <a href="../about/about.html">About</a>
+            <a href="../press/press.html">Press</a>
+            <a href="../muestras/muestras.html">Muestras</a>
+            <a href="../portfolio/sections/obras.html">Obras</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="../under-construction.html">Textos</a>
+            <a href="../shop/shop.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="proyectos-container">
+        <!-- Hero Section -->
+        <section class="proyectos-hero">
+            <h1 class="proyectos-title">Proyectos</h1>
+            <p class="proyectos-subtitle">Web development & digital art projects</p>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-grid">
+
+            <!-- El Castillo Project -->
+            <article class="project-card">
+                <div class="project-header">
+                    <h2 class="project-name">El Castillo</h2>
+                    <span class="project-year">2024</span>
+                </div>
+
+                <div class="project-preview">
+                    <iframe src="https://elcastillo.art/" title="El Castillo - Espacio de arte contemporáneo"
+                        class="website-iframe" loading="lazy"></iframe>
+                    <div class="preview-overlay">
+                        <a href="https://elcastillo.art/" target="_blank" rel="noopener noreferrer" class="btn-visit">
+                            Visit Website
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3 class="project-title">Espacio de Arte Contemporáneo</h3>
+                    <p class="project-description">
+                        El Castillo is a contemporary art space in Argentina, featuring exhibitions,
+                        artists, and a curated shop. The website showcases the venue's cultural programming
+                        and artistic vision.
+                    </p>
+
+                    <div class="project-credits">
+                        <h4>Role & Contributions</h4>
+                        <ul>
+                            <li><strong>Art Direction</strong> - Diego de Aduriz es el creador y director del espacio.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tags">
+                        <span class="tag">Art Direction</span>
+                        <span class="tag">Digital Curation</span>
+                    </div>
+
+                    <a href="https://elcastillo.art/" target="_blank" rel="noopener noreferrer"
+                        class="btn-project-link">
+                        Explore El Castillo →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Placeholder for future projects -->
+            <article class="project-card project-card--coming-soon">
+                <div class="coming-soon-content">
+                    <div class="coming-soon-icon">+</div>
+                    <h3 class="coming-soon-text">More Projects Coming Soon</h3>
+                    <p class="coming-soon-subtitle">Stay tuned for upcoming collaborations and digital works</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../navbar.js"></script>
+    <script src="proyectos.js"></script>
+</body>
+
+</html>
