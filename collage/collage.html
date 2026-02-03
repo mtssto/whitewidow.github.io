@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego de Aduriz | Collage Creator</title>
+    <link rel="stylesheet" href="../index copy.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="collage.css">
+    <!-- Touch punch for mobile drag support if using JQuery UI, but we will write vanilla JS -->
+</head>
+
+<body class="has-navbar">
+
+    <!-- Global Navbar -->
+    <header class="navbar">
+        <a class="navbar__brand" href="../index.html">Diego de Aduriz</a>
+        <nav class="navbar__links" aria-label="Main navigation">
+            <a href="../about/about.html">About</a>
+            <a href="../press/press.html">Press</a>
+            <div class="navbar__item">
+                <a href="../muestras/muestras.html">Muestras</a>
+                <div class="dropdown-content">
+                    <a href="../portfolio/sections/microcentroCuenta.html">Microcentro Cuenta</a>
+                    <a href="../portfolio/sections/elefantesEnElBazar.html">Elefantes en el Bazar</a>
+                    <a href="../portfolio/sections/laLlaveyElTestigo.html">La Llave y el Testigo</a>
+                    <a href="../portfolio/sections/miCuerpoElectrico.html">Mi Cuerpo Eléctrico</a>
+                    <a href="../portfolio/sections/friezeArt.html">Frieze Art Fair</a>
+                    <a href="../portfolio/sections/muralSeptimo.html">Mural Séptimo</a>
+                    <a href="../portfolio/sections/todoLoQueBrillaEsOro.html">Todo lo que brilla es oro</a>
+                    <a href="../portfolio/sections/lasNaves.html">Las Naves</a>
+                </div>
+            </div>
+            <div class="navbar__item">
+                <a href="../portfolio/sections/obras.html">Obras</a>
+                <div class="dropdown-content">
+                    <a href="../portfolio/sections/obras.html#pasteles">Pasteles</a>
+                    <a href="../portfolio/sections/obras.html#digital">Digital</a>
+                    <a href="../portfolio/sections/obras.html#ilustraciones">Ilustraciones</a>
+                    <a href="../portfolio/sections/obras.html#videos">Videos</a>
+                </div>
+            </div>
+            <a href="../proyectos/proyectos.html">Proyectos</a>
+            <a href="../under-construction.html">Textos</a>
+            <a href="../shop/shop.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Open menu" aria-controls="navDrawer"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="navbar-overlay" id="navOverlay" hidden></div>
+
+    <aside class="navbar-drawer" id="navDrawer" aria-label="Mobile menu">
+        <div class="navbar-drawer__head">
+            <a class="navbar__brand" href="../index.html">Diego de Aduriz</a>
+            <button class="navbar-drawer__close" id="navClose" type="button" aria-label="Close menu">✕</button>
+        </div>
+        <nav class="navbar-drawer__links">
+            <a href="../about/about.html">About</a>
+            <a href="../press/press.html">Press</a>
+            <div class="navbar__item">
+                <a href="../muestras/muestras.html">Muestras</a>
+                <div class="dropdown-content">
+                    <a href="../portfolio/sections/microcentroCuenta.html">Microcentro Cuenta</a>
+                    <a href="../portfolio/sections/elefantesEnElBazar.html">Elefantes en el Bazar</a>
+                    <a href="../portfolio/sections/laLlaveyElTestigo.html">La Llave y el Testigo</a>
+                    <a href="../portfolio/sections/miCuerpoElectrico.html">Mi Cuerpo Eléctrico</a>
+                    <a href="../portfolio/sections/friezeArt.html">Frieze Art Fair</a>
+                    <a href="../portfolio/sections/muralSeptimo.html">Mural Séptimo</a>
+                    <a href="../portfolio/sections/todoLoQueBrillaEsOro.html">Todo lo que brilla es oro</a>
+                    <a href="../portfolio/sections/lasNaves.html">Las Naves</a>
+                </div>
+            </div>
+            <div class="navbar__item">
+                <a href="../portfolio/sections/obras.html">Obras</a>
+                <div class="dropdown-content">
+                    <a href="../portfolio/sections/obras.html#pasteles">Pasteles</a>
+                    <a href="../portfolio/sections/obras.html#digital">Digital</a>
+                    <a href="../portfolio/sections/obras.html#ilustraciones">Ilustraciones</a>
+                    <a href="../portfolio/sections/obras.html#videos">Videos</a>
+                </div>
+            </div>
+            <a href="../proyectos/proyectos.html">Proyectos</a>
+            <a href="../under-construction.html">Textos</a>
+            <a href="../shop/shop.html">Shop</a>
+            <a href="mailto:contact@diegodeaduriz.com">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="collage-container">
+        <div class="collage-header">
+            <h1>Create Your Own Composition</h1>
+            <p>Drag images onto the canvas. Move, resize, and rotate to create something new!</p>
+            <div class="collage-actions">
+                <button id="clear-btn" class="btn-secondary">Clear Canvas</button>
+                <button id="download-btn" class="btn-primary">Download Image</button>
+            </div>
+        </div>
+
+        <div class="workspace">
+            <!-- Sidebar / Palette -->
+            <div class="palette-container">
+                <h3>Stickers</h3>
+                <div class="palette" id="palette">
+                    <!-- Images to drag directly -->
+                    <img src="../Ilustrates/dibu1.jpg" draggable="true" class="sticker-source">
+                    <img src="../Ilustrates/b.jpg" draggable="true" class="sticker-source">
+                    <img src="../Ilustrates/cc.jpg" draggable="true" class="sticker-source">
+                    <img src="../Ilustrates/dibu5.jpg" draggable="true" class="sticker-source">
+                    <img src="../Ilustrates/bb.jpg" draggable="true" class="sticker-source">
+                    <img src="../Ilustrates/aaaa.jpg" draggable="true" class="sticker-source">
+                    <img src="../Ilustrates/dibu3.jpg" draggable="true" class="sticker-source">
+                    <img src="../Ilustrates/ccc.jpg" draggable="true" class="sticker-source">
+                </div>
+            </div>
+
+            <!-- Main Canvas Area -->
+            <div class="canvas-wrapper">
+                <div id="collage-canvas">
+                    <p class="placeholder-text">Drop items here</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls for selected item -->
+        <div id="item-controls" class="hidden">
+            <button id="btn-delete" title="Delete">🗑️</button>
+            <button id="btn-front" title="Bring to Front">⬆️</button>
+            <button id="btn-back" title="Send to Back">⬇️</button>
+            <input type="range" id="scale-slider" min="0.5" max="3" step="0.1" value="1" title="Scale">
+            <input type="range" id="rotate-slider" min="0" max="360" step="5" value="0" title="Rotate">
+        </div>
+
+    </main>
+
+    <script src="../navbar.js"></script>
+    <!-- html2canvas for downloading -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="collage.js"></script>
+</body>
+
+</html>
