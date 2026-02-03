@@ -61,6 +61,13 @@ nav.navbar__links,
     align-items: center;
 }
 
+/* Force transparent background for mobile drawer nav (overriding Materialize default) */
+nav.navbar-drawer__links,
+.navbar-drawer__links {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
 .navbar__links a {
     text-decoration: none;
     color: var(--nav-text);
@@ -179,8 +186,31 @@ body.has-navbar {
     background: transparent !important;
 }
 
-.navbar-drawer__links a:hover {
-    background: #f5f5f5 !important;
+/* Ensure all states are transparent */
+/* Nuclear Option: Use ID selector for maximum specificity on ALL potential targets */
+#navDrawer .navbar-drawer__links,
+#navDrawer .navbar-drawer__links .navbar__item,
+#navDrawer .navbar-drawer__links .navbar__item.is-active,
+#navDrawer .navbar-drawer__links a,
+#navDrawer .navbar-drawer__links a:hover,
+#navDrawer .navbar-drawer__links a:focus,
+#navDrawer .navbar-drawer__links a:active,
+#navDrawer .navbar-drawer__links a:visited,
+#navDrawer .navbar-drawer__links .navbar__item>a,
+#navDrawer .navbar-drawer__links .navbar__item.is-active>a {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}
+
+/* Specific hover effect for text color only */
+#navDrawer .navbar-drawer__links a:hover,
+#navDrawer .navbar-drawer__links .navbar__item:hover>a {
+    color: #666 !important;
+    background: transparent !important;
 }
 
 /* Overlay */
@@ -363,19 +393,29 @@ body.has-navbar {
 
 .navbar-drawer__links .dropdown-content {
     position: static;
-    display: none !important;
+    display: none;
     background: transparent;
     box-shadow: none;
     padding-left: 20px;
     padding-top: 10px;
-    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
 }
 
 .navbar-drawer__links .navbar__item.is-active .dropdown-content {
-    display: block !important;
-    max-height: 1000px;
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .navbar-drawer__links .dropdown-content a {

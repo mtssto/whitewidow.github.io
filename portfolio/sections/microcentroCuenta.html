@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego de Aduriz | Microcentro Cuenta</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="./miCuerpoElectrico.css">
-    <link rel="stylesheet" href="../../index copy.css">
+
+    <!-- New Artist Gallery CSS -->
+    <link rel="stylesheet" href="artist-gallery.css">
+
+    <!-- Global Navigation CSS -->
     <link rel="stylesheet" href="../../navbar.css">
+    <link rel="stylesheet" href="../../index copy.css">
 </head>
 
-<body class="bodyMicuerpo has-navbar">
+<body class="has-navbar">
 
     <header class="navbar">
         <a class="navbar__brand" href="../../index.html">Diego de Aduriz</a>
@@ -21,8 +23,33 @@
         <nav class="navbar__links" aria-label="Main navigation">
             <a href="../../about/about.html">About</a>
             <a href="../../press/press.html">Press</a>
-            <a href="../../muestras/muestras.html">Muestras</a>
-            <a href="../../portfolio/sections/obras.html">Obras</a>
+
+            <!-- Muestras Dropdown -->
+            <div class="navbar__item">
+                <a href="../../muestras/muestras.html">Muestras</a>
+                <div class="dropdown-content">
+                    <a href="microcentroCuenta.html">Microcentro Cuenta</a>
+                    <a href="elefantesEnElBazar.html">Elefantes en el Bazar</a>
+                    <a href="laLlaveyElTestigo.html">La Llave y el Testigo</a>
+                    <a href="miCuerpoElectrico.html">Mi Cuerpo Eléctrico</a>
+                    <a href="friezeArt.html">Frieze Art Fair</a>
+                    <a href="muralSeptimo.html">Mural Séptimo</a>
+                    <a href="todoLoQueBrillaEsOro.html">Todo lo que brilla es oro</a>
+                    <a href="lasNaves.html">Las Naves</a>
+                </div>
+            </div>
+
+            <!-- Obras Dropdown -->
+            <div class="navbar__item">
+                <a href="obras.html">Obras</a>
+                <div class="dropdown-content">
+                    <a href="obras.html#pasteles">Pasteles</a>
+                    <a href="obras.html#digital">Digital</a>
+                    <a href="obras.html#ilustraciones">Ilustraciones</a>
+                    <a href="obras.html#videos">Videos</a>
+                </div>
+            </div>
+
             <a href="../../under-construction.html">Proyectos</a>
             <a href="../../under-construction.html">Textos</a>
             <a href="../../under-construction.html">Shop</a>
@@ -62,14 +89,14 @@
                 </div>
             </div>
 
-            <!-- Obras Dropdown -->
+            <!-- Obras Dropdown in Mobile -->
             <div class="navbar__item">
                 <a href="obras.html">Obras</a>
                 <div class="dropdown-content">
                     <a href="obras.html#pasteles">Pasteles</a>
-                    <a href="digitalArt.html">Digital</a>
-                    <a href="../../Ilustrations/Ilustrations.html">Ilustraciones</a>
-                    <a href="videos.html">Videos</a>
+                    <a href="obras.html#digital">Digital</a>
+                    <a href="obras.html#ilustraciones">Ilustraciones</a>
+                    <a href="obras.html#videos">Videos</a>
                 </div>
             </div>
 
@@ -80,49 +107,38 @@
         </nav>
     </aside>
 
-    <main class="container">
-        <div>
-            <div>
-                <h1 class="titulo">MICROCENTRO CUENTA</h1>
-                <h3 class="sub-title">Banco Galicia</h3>
+    <main class="gallery-container">
+        <div class="artist-header">
+            <h1 class="artist-title">Microcentro Cuenta</h1>
+            <h3 class="artist-subtitle">Banco Galicia</h3>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Microcentro cuenta/2.jpg" alt="Microcentro Cuenta - Obra 2">
+            </div>
+            <div class="gallery-item">
+                <img src="Microcentro cuenta/3.jpg" alt="Microcentro Cuenta - Obra 3">
+            </div>
+            <div class="gallery-item">
+                <img src="Microcentro cuenta/4.jpg" alt="Microcentro Cuenta - Obra 4">
+            </div>
+            <div class="gallery-item">
+                <img src="Microcentro cuenta/5.jpg" alt="Microcentro Cuenta - Obra 5">
+            </div>
+            <div class="gallery-item">
+                <img src="Microcentro cuenta/6.jpg" alt="Microcentro Cuenta - Obra 6">
             </div>
         </div>
-        <div class="row galeria">
-            <div class="column column-4" data-aos="fade-left">
-                <div class="material-placeholder">
-                    <img src="../sections/Microcentro cuenta/2.jpg" alt="" class="responsive-img materialboxed">
-                </div>
-                <div class="material-placeholder">
-                    <img src="../sections/Microcentro cuenta/3.jpg" alt="" class="responsive-img materialboxed">
-                </div>
-                <div class="material-placeholder">
-                    <img src="../sections/Microcentro cuenta/4.jpg" alt="" class="responsive-img materialboxed">
-                </div>
-            </div>
-
-            <div class="column column-4" data-aos="fade-left">
-                <div class="material-placeholder">
-                    <img src="../sections/Microcentro cuenta/5.jpg" alt="" class="responsive-img materialboxed">
-                </div>
-                <div class="material-placeholder">
-                    <img src="../sections/Microcentro cuenta/6.jpg" alt="" class="responsive-img materialboxed">
-                </div>
-            </div>
-            <button class="materialboxed-close" aria-label="Close Modal">×</button>
-
     </main>
 
     <footer>
         <p>&copy; 2024 Diego de Aduriz. All rights reserved.</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../js/main.js"></script>
-    <!-- <script src="dropdown.js"></script> -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+
+    <!-- Global Navigation Logic -->
     <script src="../../navbar.js"></script>
+
 </body>
 
 </html>

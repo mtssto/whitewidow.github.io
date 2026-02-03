@@ -1,0 +1,113 @@
+/* Artist Gallery - Modern Masonry Layout */
+/* Replaces Materialize grid for a cleaner, "more artist" look */
+
+.gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    /* More side padding on desktop */
+}
+
+/* Clean Typography */
+.artist-header {
+    text-align: center;
+    margin-top: 4rem;
+    /* Space from fixed navbar */
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+
+.artist-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 4px;
+    /* Airy spacing */
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.artist-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    color: #666;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Masonry Grid (CSS Columns) */
+/* This handles vertical stacking of images with different aspect ratios perfectly */
+.gallery-grid {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    /* Prevent images from splitting across columns */
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Stagger animations for a nice effect */
+.gallery-item:nth-child(2n) {
+    animation-delay: 0.1s;
+}
+
+.gallery-item:nth-child(3n) {
+    animation-delay: 0.2s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    /* Optional: Start slightly desaturated, full color on hover? */
+    /* filter: grayscale(20%); */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+    /* filter: grayscale(0%); */
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+
+    .gallery-container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        column-count: 1;
+    }
+
+    .gallery-container {
+        padding: 1rem;
+    }
+
+    .artist-title {
+        font-size: 1.8rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
